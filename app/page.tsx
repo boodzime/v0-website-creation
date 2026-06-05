@@ -181,10 +181,10 @@ export default function HomePage() {
 
         {/* Animated sections with scroll-triggered animations */}
         <StatsSection />
+        <CTASection />
         <FeaturedPostsSection posts={featuredPosts} />
         <RecentPostsSection posts={recentPosts} />
         <ContactSection />
-        <CTASection />
       </main>
 
       <Footer />
