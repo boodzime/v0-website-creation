@@ -18,7 +18,7 @@ export default function HomePage() {
         <section className="relative overflow-hidden border-b border-border">
           {/* Background video */}
           <video
-            className="absolute inset-0 h-full w-full object-cover opacity-40"
+            className="absolute inset-0 h-full w-full object-cover opacity-70"
             autoPlay
             loop
             muted
@@ -27,8 +27,9 @@ export default function HomePage() {
           >
             <source src="/hero-background.mp4" type="video/mp4" />
           </video>
-          {/* Dark overlay for readability */}
-          <div className="absolute inset-0 bg-background/70" />
+          {/* Overlay for readability: darker on the left where the text sits, lighter on the right */}
+          <div className="absolute inset-0 bg-gradient-to-r from-background/90 via-background/55 to-background/30" />
+          <div className="absolute inset-0 bg-background/20" />
 
           {/* Animated neon glow effects */}
           <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_left,_var(--tw-gradient-stops))] from-primary/30 via-transparent to-transparent animate-pulse" />
