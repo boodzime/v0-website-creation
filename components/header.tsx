@@ -55,9 +55,9 @@ export function Header() {
             <Image
               src="/logo.png"
               alt="TechSpaw"
-              width={120}
-              height={40}
-              className="relative h-10 w-auto drop-shadow-[0_0_10px_rgba(0,255,255,0.5)] group-hover:drop-shadow-[0_0_20px_rgba(0,255,255,0.8)] transition-all duration-300"
+              width={180}
+              height={60}
+              className="relative h-14 w-auto drop-shadow-[0_0_10px_rgba(0,255,255,0.5)] group-hover:drop-shadow-[0_0_20px_rgba(0,255,255,0.8)] transition-all duration-300"
             />
           </div>
         </Link>
