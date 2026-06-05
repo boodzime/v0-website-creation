@@ -508,7 +508,7 @@ export function FloatingPhoneButton() {
   return (
     <a
       href="tel:+48691779481"
-      className={`fixed bottom-6 right-6 z-50 group transition-all duration-500 ${
+      className={`fixed bottom-24 md:bottom-6 right-4 md:right-6 z-40 group transition-all duration-500 ${
         isVisible ? 'translate-y-0 opacity-100' : 'translate-y-20 opacity-0'
       }`}
       onMouseEnter={() => setIsHovered(true)}
