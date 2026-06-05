@@ -22,10 +22,10 @@ export function CategoryFilter() {
         <button
           key={category}
           onClick={() => handleCategoryChange(category)}
-          className={`inline-flex items-center rounded-full px-4 py-2 text-sm font-medium transition-all ${
+          className={`inline-flex items-center rounded-full px-4 py-2 text-sm font-medium transition-all duration-300 ${
             currentCategory === category
-              ? 'bg-gradient-to-r from-primary to-accent text-primary-foreground shadow-[0_0_20px_rgba(0,255,255,0.4)]'
-              : 'bg-card border border-primary/20 text-muted-foreground hover:border-primary/50 hover:text-foreground hover:shadow-[0_0_15px_rgba(0,255,255,0.2)]'
+              ? 'bg-gradient-to-r from-primary to-accent text-primary-foreground shadow-[0_0_16px_rgba(0,255,255,0.3)]'
+              : 'bg-card border border-primary/20 text-muted-foreground hover:border-primary/40 hover:text-foreground hover:shadow-[0_0_12px_rgba(0,255,255,0.15)]'
           }`}
         >
           {category}

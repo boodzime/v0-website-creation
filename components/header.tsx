@@ -3,17 +3,17 @@ import Image from 'next/image'
 
 export function Header() {
   return (
-    <header className="animate-fade-in-down sticky top-0 z-50 border-b border-primary/20 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
+    <header className="animate-fade-in-down opacity-0 sticky top-0 z-50 border-b border-primary/20 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60" style={{ animationFillMode: 'forwards' }}>
       <div className="mx-auto flex h-16 max-w-6xl items-center justify-between px-4">
         <Link href="/" className="flex items-center gap-3 group">
           <div className="relative">
-            <div className="absolute inset-0 bg-primary/30 blur-xl rounded-full opacity-0 group-hover:opacity-100 transition-all duration-500 scale-150" />
+            <div className="absolute inset-0 bg-primary/20 blur-xl rounded-full opacity-0 group-hover:opacity-100 transition-all duration-500 scale-150" />
             <Image
               src="/logo.png"
               alt="TechSpaw"
               width={120}
               height={40}
-              className="relative h-10 w-auto drop-shadow-[0_0_10px_rgba(0,255,255,0.5)] group-hover:drop-shadow-[0_0_20px_rgba(0,255,255,0.8)] transition-all duration-300"
+              className="relative h-10 w-auto drop-shadow-[0_0_8px_rgba(0,255,255,0.4)] group-hover:drop-shadow-[0_0_16px_rgba(0,255,255,0.6)] transition-all duration-300"
             />
           </div>
         </Link>
@@ -24,12 +24,11 @@ export function Header() {
             { href: '/blog', label: 'Blog' },
             { href: '/blog?kategoria=Techniki', label: 'Techniki' },
             { href: '/blog?kategoria=Sprzet', label: 'Sprzet' },
-          ].map((item, index) => (
+          ].map((item) => (
             <Link 
               key={item.href}
               href={item.href} 
               className="relative text-sm font-medium text-muted-foreground transition-all duration-300 hover:text-primary group"
-              style={{ animationDelay: `${index * 100}ms` }}
             >
               {item.label}
               <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-primary to-accent group-hover:w-full transition-all duration-300" />
@@ -39,9 +38,9 @@ export function Header() {
 
         <Link
           href="/blog"
-          className="group inline-flex h-10 items-center justify-center rounded-lg bg-gradient-to-r from-primary to-accent px-6 text-sm font-semibold text-primary-foreground transition-all duration-300 hover:shadow-[0_0_25px_rgba(0,255,255,0.6)] hover:scale-105 animate-gradient-x"
+          className="group inline-flex h-10 items-center justify-center rounded-lg bg-gradient-to-r from-primary to-accent px-6 text-sm font-semibold text-primary-foreground transition-all duration-300 hover:shadow-[0_0_20px_rgba(0,255,255,0.5)] hover:scale-[1.02]"
         >
-          <span className="group-hover:tracking-wider transition-all duration-300">Czytaj Blog</span>
+          <span className="group-hover:tracking-wide transition-all duration-300">Czytaj Blog</span>
         </Link>
       </div>
     </header>
