@@ -12,6 +12,29 @@ export const metadata: Metadata = {
   title: 'Blog Spawalniczy | Techniki, Porady, Wiedza',
   description: 'Profesjonalny blog o spawaniu - techniki MIG, TIG, MMA, porady dla spawaczy, recenzje sprzetu i praktyczna wiedza spawalnicza.',
   generator: 'v0.app',
+  metadataBase: new URL('https://techspaw.pl'),
+  openGraph: {
+    title: 'TechSpaw - Blog Spawalniczy',
+    description: 'Profesjonalny blog o spawaniu - techniki MIG, TIG, MMA, porady dla spawaczy, recenzje sprzetu i praktyczna wiedza spawalnicza.',
+    url: 'https://techspaw.pl',
+    siteName: 'TechSpaw',
+    images: [
+      {
+        url: '/og-image.png',
+        width: 1200,
+        height: 630,
+        alt: 'TechSpaw - Blog Spawalniczy',
+      },
+    ],
+    locale: 'pl_PL',
+    type: 'website',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'TechSpaw - Blog Spawalniczy',
+    description: 'Profesjonalny blog o spawaniu - techniki MIG, TIG, MMA, porady dla spawaczy.',
+    images: ['/og-image.png'],
+  },
   icons: {
     icon: [
       {
