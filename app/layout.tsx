@@ -3,6 +3,7 @@ import type { Metadata } from 'next'
 import { Inter, Space_Grotesk } from 'next/font/google'
 import './globals.css'
 import { CookieBanner } from '@/components/cookie-banner'
+import { PageLoader } from '@/components/page-loader'
 
 const inter = Inter({ subsets: ['latin', 'latin-ext'], variable: '--font-inter' })
 const spaceGrotesk = Space_Grotesk({ subsets: ['latin'], variable: '--font-space' })
@@ -38,6 +39,7 @@ export default function RootLayout({
   return (
     <html lang="pl" className="bg-background">
       <body className={`${inter.variable} ${spaceGrotesk.variable} font-sans antialiased`}>
+        <PageLoader />
         {children}
         <CookieBanner />
         {process.env.NODE_ENV === 'production' && <Analytics />}
