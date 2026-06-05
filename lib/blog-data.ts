@@ -13,6 +13,377 @@ export interface BlogPost {
 
 export const blogPosts: BlogPost[] = [
   {
+    id: '7',
+    slug: 'ile-kosztuje-spawanie-cennik-uslug-2026',
+    title: 'Ile kosztuje spawanie w 2026? Cennik usług spawalniczych',
+    excerpt: 'Sprawdź aktualne ceny usług spawalniczych. Od czego zależy cena spawania i jak przygotować się do wyceny?',
+    content: `
+## Ceny usług spawalniczych w 2026 roku
+
+Ceny spawania mogą się znacznie różnić w zależności od wielu czynników. W tym artykule przedstawiamy orientacyjny cennik oraz wyjaśniamy, od czego zależy ostateczna cena usługi.
+
+## Od czego zależy cena spawania?
+
+### 1. Metoda spawania
+
+| Metoda | Cena orientacyjna za godzinę |
+|--------|------------------------------|
+| MMA (elektroda) | 50-80 zł/h |
+| MIG/MAG | 60-100 zł/h |
+| TIG | 80-150 zł/h |
+
+### 2. Rodzaj materiału
+
+- **Stal węglowa** - cena bazowa
+- **Stal nierdzewna** - +30-50% do ceny bazowej
+- **Aluminium** - +50-80% do ceny bazowej
+- **Metale specjalne** - wycena indywidualna
+
+### 3. Złożoność projektu
+
+Proste spoiny wykonane w pozycji podłogowej są tańsze niż skomplikowane prace w trudnych pozycjach (pułapowa, pionowa).
+
+### 4. Lokalizacja
+
+- Praca w warsztacie jest zazwyczaj tańsza
+- Dojazd do klienta - często bezpłatny do 30km, powyżej 2-3 zł/km
+
+## Orientacyjny cennik usług
+
+### Drobne naprawy
+- Naprawa przyczepy - 100-300 zł
+- Spawanie ramy roweru - 50-150 zł
+- Naprawa bramy/furtki - 100-400 zł
+
+### Konstrukcje stalowe
+- Balustrada prosta (mb) - 200-400 zł
+- Schody stalowe - 2000-8000 zł
+- Brama wjazdowa - 1500-5000 zł
+
+### Prace przemysłowe
+- Konstrukcje hal - wycena indywidualna
+- Zbiorniki i rurociągi - wycena indywidualna
+
+## Jak przygotować się do wyceny?
+
+1. **Określ zakres prac** - co dokładnie ma być wykonane
+2. **Podaj wymiary** - długość spoin, wielkość konstrukcji
+3. **Określ materiał** - rodzaj i grubość stali
+4. **Zdjęcia** - jeśli to naprawa, wyślij zdjęcia
+5. **Termin** - pilne zlecenia mogą być droższe
+
+## Podsumowanie
+
+Ceny spawania zależą od wielu czynników. Zawsze warto poprosić o wycenę kilku wykonawców i porównać oferty, pamiętając że najtańsza opcja nie zawsze oznacza najlepszą jakość.
+    `,
+    category: 'Sprzet',
+    date: '2026-01-20',
+    readTime: '7 min',
+    image: '/blog/cennik.png',
+    featured: true
+  },
+  {
+    id: '8',
+    slug: 'mig-vs-tig-vs-mma-ktora-metoda-dla-ciebie',
+    title: 'MIG vs TIG vs MMA - Którą metodę spawania wybrać?',
+    excerpt: 'Porównanie trzech najpopularniejszych metod spawania. Dowiedz się, która będzie najlepsza dla Twoich potrzeb.',
+    content: `
+## Porównanie metod spawania
+
+Wybór metody spawania zależy od wielu czynników: rodzaju materiału, wymaganej jakości, miejsca pracy i budżetu. Przeanalizujmy każdą metodę.
+
+## MIG/MAG - Uniwersalność i wydajność
+
+### Zalety
+- Łatwa do nauki
+- Wysoka wydajność
+- Czyste spoiny (minimum żużla)
+- Możliwość automatyzacji
+
+### Wady
+- Wymaga butli z gazem
+- Mniej mobilna
+- Wrażliwa na wiatr
+
+### Kiedy wybierać MIG/MAG?
+- Prace warsztatowe
+- Serie produkcyjne
+- Średnie i grube materiały
+- Stal węglowa i nierdzewna
+
+## TIG - Precyzja i jakość
+
+### Zalety
+- Najwyższa jakość spoin
+- Pełna kontrola nad procesem
+- Idealna do cienkich materiałów
+- Brak rozprysków
+
+### Wady
+- Trudna technika
+- Niska wydajność
+- Najdroższy sprzęt
+
+### Kiedy wybierać TIG?
+- Stal nierdzewna
+- Aluminium
+- Cienkie blachy
+- Prace wymagające estetyki
+- Przemysł spożywczy/farmaceutyczny
+
+## MMA - Tradycja i mobilność
+
+### Zalety
+- Prosta i tania
+- Praca bez gazu
+- Idealna do terenu
+- Odporna na wiatr
+
+### Wady
+- Wymaga usuwania żużla
+- Więcej rozprysków
+- Wolniejsza nauka techniki
+
+### Kiedy wybierać MMA?
+- Prace terenowe
+- Naprawy w trudnych warunkach
+- Budowy
+- Ograniczony budżet
+
+## Tabela porównawcza
+
+| Cecha | MIG/MAG | TIG | MMA |
+|-------|---------|-----|-----|
+| Łatwość nauki | ★★★★★ | ★★☆☆☆ | ★★★☆☆ |
+| Jakość spoiny | ★★★★☆ | ★★★★★ | ★★★☆☆ |
+| Wydajność | ★★★★★ | ★★☆☆☆ | ★★★☆☆ |
+| Mobilność | ★★★☆☆ | ★★☆☆☆ | ★★★★★ |
+| Koszt sprzętu | ★★★☆☆ | ★★☆☆☆ | ★★★★★ |
+| Uniwersalność | ★★★★☆ | ★★★★☆ | ★★★★☆ |
+
+## Podsumowanie
+
+- **Początkujący hobbysta** → MIG/MAG
+- **Precyzyjne prace, nierdzewka** → TIG
+- **Prace terenowe, naprawy** → MMA
+- **Profesjonalista** → wszystkie metody w zależności od projektu
+    `,
+    category: 'Techniki',
+    date: '2026-01-15',
+    readTime: '8 min',
+    image: '/blog/porownanie.png',
+    featured: false
+  },
+  {
+    id: '9',
+    slug: '5-bledow-przy-zamawianiu-uslug-spawalniczych',
+    title: '5 błędów przy zamawianiu usług spawalniczych',
+    excerpt: 'Unikaj tych pułapek przy zlecaniu prac spawalniczych. Praktyczne porady, które zaoszczędzą Ci czas i pieniądze.',
+    content: `
+## Najczęstsze błędy przy zlecaniu spawania
+
+Zamawiając usługi spawalnicze, łatwo popełnić błędy, które mogą kosztować czas i pieniądze. Oto 5 najczęstszych problemów i jak ich uniknąć.
+
+## Błąd 1: Niejasny opis zlecenia
+
+### Problem
+"Proszę zespawać bramę" - taki opis nic nie mówi wykonawcy.
+
+### Rozwiązanie
+Podaj szczegóły:
+- Wymiary (szerokość, wysokość)
+- Materiał (profil zamknięty, kątownik, rura)
+- Czy z montażem
+- Rodzaj wypełnienia
+- Zabezpieczenie antykorozyjne
+
+## Błąd 2: Wybieranie tylko po cenie
+
+### Problem
+Najtańsza oferta często oznacza:
+- Gorsze materiały
+- Brak uprawnień
+- Słabą jakość spoin
+- Brak gwarancji
+
+### Rozwiązanie
+Porównuj oferty pod kątem:
+- Doświadczenia wykonawcy
+- Portfolio realizacji
+- Opinii klientów
+- Zakresu usługi (czy cena zawiera materiał, transport, montaż?)
+
+## Błąd 3: Brak pisemnej umowy
+
+### Problem
+Ustalenia ustne łatwo zapomnieć lub różnie interpretować.
+
+### Rozwiązanie
+Zawsze ustal na piśmie (choćby mail):
+- Dokładny zakres prac
+- Cenę i sposób płatności
+- Termin realizacji
+- Warunki gwarancji
+- Kto dostarcza materiał
+
+## Błąd 4: Nieprzygotowane miejsce pracy
+
+### Problem
+Spawacz przyjeżdża, a:
+- Brak dostępu do prądu
+- Element do spawania jest niedostępny
+- Trzeba coś najpierw rozmontować
+
+### Rozwiązanie
+Przed wizytą zapewnij:
+- Zasilanie (230V lub 400V - zapytaj)
+- Dostęp do miejsca pracy
+- Przygotowany element (oczyszczony, rozmontowany)
+
+## Błąd 5: Brak kontroli jakości
+
+### Problem
+Odbiór prac "na szybko" bez sprawdzenia jakości.
+
+### Rozwiązanie
+Przy odbiorze sprawdź:
+- Wygląd spoin (równomierność, brak porów)
+- Zgodność z ustaleniami
+- Stabilność konstrukcji
+- Zabezpieczenie antykorozyjne (jeśli było w umowie)
+
+## Podsumowanie
+
+Dobre przygotowanie do zlecenia to:
+1. Szczegółowy opis z wymiarami
+2. Porównanie kilku ofert
+3. Pisemne ustalenia
+4. Przygotowane miejsce pracy
+5. Staranna kontrola przy odbiorze
+
+Te proste zasady pozwolą uniknąć większości problemów przy zamawianiu usług spawalniczych.
+    `,
+    category: 'Projekty',
+    date: '2026-01-10',
+    readTime: '6 min',
+    image: '/blog/bledy.png',
+    featured: false
+  },
+  {
+    id: '10',
+    slug: 'jak-przygotowac-material-do-spawania',
+    title: 'Jak przygotować materiał do spawania?',
+    excerpt: 'Prawidłowe przygotowanie materiału to połowa sukcesu. Poznaj kluczowe zasady przygotowania stali do spawania.',
+    content: `
+## Przygotowanie materiału - klucz do dobrej spoiny
+
+Jakość spoiny w dużej mierze zależy od przygotowania materiału. Nawet najlepszy spawacz nie wykona dobrej spoiny na brudnym czy zardzewiałym materiale.
+
+## Etapy przygotowania
+
+### 1. Oczyszczenie mechaniczne
+
+**Usuwamy:**
+- Rdzę
+- Starą farbę
+- Zgorzelinę
+- Pozostałości po cięciu
+
+**Narzędzia:**
+- Szlifierka kątowa z tarczą lamelkową
+- Szczotka druciana
+- Piaskarka (dla większych elementów)
+
+### 2. Odtłuszczanie
+
+**Usuwa:**
+- Oleje i smary
+- Emulsje chłodzące
+- Odciski palców
+
+**Środki:**
+- Aceton
+- Rozpuszczalnik
+- Alkohol izopropylowy
+
+**Uwaga:** Zawsze odtłuszczaj PO oczyszczeniu mechanicznym!
+
+### 3. Przygotowanie rowka spawalniczego
+
+Dla blach o grubości powyżej 5mm konieczne jest ukosowanie krawędzi.
+
+**Rodzaje rowków:**
+
+| Grubość | Typ rowka | Kąt |
+|---------|-----------|-----|
+| do 5mm | Bez rowka | - |
+| 5-12mm | V jednostronny | 60° |
+| 12-20mm | V dwustronny | 60° |
+| pow. 20mm | U lub X | wg projektu |
+
+### 4. Sczepianie elementów
+
+Przed spawaniem właściwym elementy trzeba ustalić i zespoić.
+
+**Zasady sczepiania:**
+- Punkty co 10-15 cm dla cienkich blach
+- Punkty co 20-30 cm dla grubszych elementów
+- Pierwszy punkt na środku, kolejne symetrycznie
+- Szczepi się po stronie przeciwnej do spawania głównego
+
+### 5. Podgrzewanie wstępne
+
+Wymagane dla:
+- Stali o podwyższonej wytrzymałości
+- Grubych elementów (powyżej 25mm)
+- Niskich temperatur otoczenia (poniżej +5°C)
+- Stali nierdzewnej (niektóre gatunki)
+
+## Specyfika materiałów
+
+### Stal węglowa
+- Standardowe czyszczenie
+- Odtłuszczanie
+- Ukosowanie dla grubszych blach
+
+### Stal nierdzewna
+- Tylko szczotki ze stali nierdzewnej!
+- Dokładne odtłuszczanie
+- Praca w rękawiczkach (odciski = korozja)
+- Osobne narzędzia (bez kontaktu ze stalą węglową)
+
+### Aluminium
+- Usunięcie warstwy tlenku tuż przed spawaniem
+- Szczotka ze stali nierdzewnej
+- Aceton do odtłuszczania
+- Tlenki odnawiają się w minutach!
+
+## Błędy do unikania
+
+1. **Spawanie na rdzy** - spoina będzie porowata
+2. **Brak odtłuszczenia** - porowatość, złe zwilżanie
+3. **Narzędzia do stali węglowej na nierdzewnej** - korozja!
+4. **Zbyt duża szczelina** - przepalenia, nadmiar spoiwa
+5. **Brak podgrzewania gdy wymagane** - pęknięcia zimne
+
+## Podsumowanie
+
+Prawidłowe przygotowanie to:
+1. Oczyszczenie mechaniczne
+2. Odtłuszczenie
+3. Ukosowanie (dla grubszych materiałów)
+4. Właściwe sczepianie
+5. Podgrzewanie (gdy wymagane)
+
+Te kroki zajmują czas, ale znacząco wpływają na jakość i trwałość spoiny.
+    `,
+    category: 'Techniki',
+    date: '2026-01-05',
+    readTime: '9 min',
+    image: '/blog/przygotowanie.png',
+    featured: false
+  },
+  {
     id: '1',
     slug: 'spawanie-mig-mag-kompletny-przewodnik',
     title: 'Spawanie MIG/MAG - Kompletny Przewodnik dla Poczatkujacych i Zaawansowanych',
