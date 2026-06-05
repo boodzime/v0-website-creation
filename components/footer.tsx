@@ -11,7 +11,8 @@ function FacebookIcon({ className }: { className?: string }) {
 
 export function Footer() {
   return (
-    <footer className="border-t border-primary/20 bg-card/50 backdrop-blur-sm relative overflow-hidden">
+    <>
+      <footer className="border-t border-primary/20 bg-card/50 backdrop-blur-sm relative overflow-hidden">
       {/* Animated background elements */}
       <div className="absolute top-0 left-1/4 w-96 h-96 bg-primary/5 rounded-full blur-3xl animate-pulse" />
       <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-accent/5 rounded-full blur-3xl animate-pulse" style={{ animationDelay: '1s' }} />
@@ -196,5 +197,9 @@ export function Footer() {
         </div>
       </div>
     </footer>
+    
+    {/* Spacer for mobile bottom navigation */}
+    <div className="md:hidden h-20" />
+    </>
   )
 }
