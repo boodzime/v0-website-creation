@@ -47,7 +47,7 @@ export function Header() {
       {/* Animated neon top line */}
       <div className="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-primary/60 to-transparent animate-shimmer" />
 
-      <div className="mx-auto flex h-16 max-w-6xl items-center justify-between px-4">
+      <div className="mx-auto flex h-24 max-w-6xl items-center justify-between px-4">
         {/* Logo */}
         <Link href="/" className="flex items-center gap-3 group" onClick={() => setOpen(false)}>
           <div className="relative">
@@ -55,9 +55,9 @@ export function Header() {
             <Image
               src="/logo.png"
               alt="TechSpaw"
-              width={180}
-              height={60}
-              className="relative h-14 w-auto drop-shadow-[0_0_10px_rgba(0,255,255,0.5)] group-hover:drop-shadow-[0_0_20px_rgba(0,255,255,0.8)] transition-all duration-300"
+              width={240}
+              height={80}
+              className="relative h-20 w-auto drop-shadow-[0_0_10px_rgba(0,255,255,0.5)] group-hover:drop-shadow-[0_0_20px_rgba(0,255,255,0.8)] transition-all duration-300"
             />
           </div>
         </Link>

@@ -1,9 +1,25 @@
 import { Suspense } from 'react'
+import type { Metadata } from 'next'
 import { Header } from '@/components/header'
 import { Footer } from '@/components/footer'
 import { BlogCard } from '@/components/blog-card'
 import { CategoryFilter } from '@/components/category-filter'
 import { getPostsByCategory } from '@/lib/blog-data'
+import { getBlogListSchema, getBreadcrumbSchema } from '@/lib/seo-schemas'
+
+export const metadata: Metadata = {
+  title: 'Blog Spawalniczy - Artykuly o Spawaniu MIG, TIG, MMA',
+  description: 'Odkryj swiat spawania - od podstawowych technik MIG, TIG, MMA po zaawansowane metody. Praktyczna wiedza, porady ekspertow i recenzje sprzetu spawalniczego.',
+  alternates: {
+    canonical: '/blog',
+  },
+  openGraph: {
+    title: 'Blog Spawalniczy - TechSpaw',
+    description: 'Artykuly o spawaniu - techniki MIG, TIG, MMA, porady, recenzje sprzetu spawalniczego.',
+    url: 'https://techspaw.pl/blog',
+    type: 'website',
+  },
+}
 
 interface BlogPageProps {
   searchParams: Promise<{ kategoria?: string }>
@@ -16,6 +32,23 @@ export default async function BlogPage({ searchParams }: BlogPageProps) {
 
   return (
     <div className="min-h-screen flex flex-col">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(getBlogListSchema()),
+        }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(
+            getBreadcrumbSchema([
+              { name: 'Strona glowna', url: 'https://techspaw.pl' },
+              { name: 'Blog' },
+            ])
+          ),
+        }}
+      />
       <Header />
       
       <main className="flex-1">
