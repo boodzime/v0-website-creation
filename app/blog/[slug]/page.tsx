@@ -5,6 +5,7 @@ import { Header } from '@/components/header'
 import { Footer } from '@/components/footer'
 import { BlogCard } from '@/components/blog-card'
 import { getPostBySlug, blogPosts } from '@/lib/blog-data'
+import { getBlogPostSchema, getBreadcrumbSchema } from '@/lib/seo-schemas'
 import type { Metadata } from 'next'
 
 interface BlogPostPageProps {
@@ -19,9 +20,44 @@ export async function generateMetadata({ params }: BlogPostPageProps): Promise<M
     return { title: 'Nie znaleziono artykulu' }
   }
 
+  const keywords = [
+    'spawanie',
+    post.category.toLowerCase(),
+    'techniki spawania',
+    'poradnik spawacza',
+    ...post.title.toLowerCase().split(' ').filter((w) => w.length > 4),
+  ]
+
   return {
-    title: `${post.title} | TechSpaw Blog`,
+    title: post.title,
     description: post.excerpt,
+    keywords,
+    alternates: {
+      canonical: `/blog/${post.slug}`,
+    },
+    openGraph: {
+      title: post.title,
+      description: post.excerpt,
+      url: `https://techspaw.pl/blog/${post.slug}`,
+      type: 'article',
+      publishedTime: post.date,
+      modifiedTime: post.date,
+      section: post.category,
+      images: [
+        {
+          url: post.image,
+          width: 1200,
+          height: 630,
+          alt: post.title,
+        },
+      ],
+    },
+    twitter: {
+      card: 'summary_large_image',
+      title: post.title,
+      description: post.excerpt,
+      images: [post.image],
+    },
   }
 }
 
@@ -187,6 +223,24 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
 
   return (
     <div className="min-h-screen flex flex-col">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(getBlogPostSchema(slug)),
+        }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(
+            getBreadcrumbSchema([
+              { name: 'Strona glowna', url: 'https://techspaw.pl' },
+              { name: 'Blog', url: 'https://techspaw.pl/blog' },
+              { name: post.title },
+            ])
+          ),
+        }}
+      />
       <Header />
       
       <main className="flex-1">
