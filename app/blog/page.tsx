@@ -3,6 +3,7 @@ import { Header } from '@/components/header'
 import { Footer } from '@/components/footer'
 import { BlogCard } from '@/components/blog-card'
 import { CategoryFilter } from '@/components/category-filter'
+import { CTABanner } from '@/components/cta-section'
 import { getPostsByCategory } from '@/lib/blog-data'
 
 interface BlogPageProps {
@@ -108,6 +109,9 @@ export default async function BlogPage({ searchParams }: BlogPageProps) {
             )}
           </div>
         </section>
+
+        {/* CTA Section */}
+        <CTABanner />
       </main>
 
       <Footer />
