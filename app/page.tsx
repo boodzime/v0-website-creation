@@ -16,6 +16,20 @@ export default function HomePage() {
       <main className="flex-1">
         {/* Hero Section */}
         <section className="relative overflow-hidden border-b border-border">
+          {/* Background video */}
+          <video
+            className="absolute inset-0 h-full w-full object-cover opacity-40"
+            autoPlay
+            loop
+            muted
+            playsInline
+            aria-hidden="true"
+          >
+            <source src="/hero-background.mp4" type="video/mp4" />
+          </video>
+          {/* Dark overlay for readability */}
+          <div className="absolute inset-0 bg-background/70" />
+
           {/* Animated neon glow effects */}
           <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_left,_var(--tw-gradient-stops))] from-primary/30 via-transparent to-transparent animate-pulse" />
           <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_bottom_right,_var(--tw-gradient-stops))] from-accent/20 via-transparent to-transparent animate-pulse" style={{ animationDelay: '1s' }} />
@@ -97,10 +111,10 @@ export default function HomePage() {
                     <div className="absolute inset-0 bg-gradient-to-r from-accent/20 to-primary/20 blur-2xl rounded-full scale-125 animate-pulse" style={{ animationDelay: '0.5s' }} />
                     <Image
                       src="/logo.png"
-                      alt="TechSpaw Logo"
-                      width={300}
-                      height={300}
-                      className="relative drop-shadow-[0_0_40px_rgba(0,255,255,0.6)] hover:drop-shadow-[0_0_60px_rgba(0,255,255,0.8)] transition-all duration-500 hover:scale-110"
+                      alt="FutureTech Logo"
+                      width={420}
+                      height={140}
+                      className="relative h-auto w-[420px] drop-shadow-[0_0_40px_rgba(0,255,255,0.6)] hover:drop-shadow-[0_0_60px_rgba(0,255,255,0.8)] transition-all duration-500 hover:scale-110"
                     />
                   </div>
                 </div>
