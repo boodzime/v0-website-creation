@@ -24,8 +24,8 @@ export function CategoryFilter() {
           onClick={() => handleCategoryChange(category)}
           className={`inline-flex items-center rounded-full px-4 py-2 text-sm font-medium transition-all ${
             currentCategory === category
-              ? 'bg-primary text-primary-foreground'
-              : 'bg-card border border-border text-muted-foreground hover:border-primary/50 hover:text-foreground'
+              ? 'bg-gradient-to-r from-primary to-accent text-primary-foreground shadow-[0_0_20px_rgba(0,255,255,0.4)]'
+              : 'bg-card border border-primary/20 text-muted-foreground hover:border-primary/50 hover:text-foreground hover:shadow-[0_0_15px_rgba(0,255,255,0.2)]'
           }`}
         >
           {category}

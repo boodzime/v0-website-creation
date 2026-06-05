@@ -20,10 +20,16 @@ export default async function BlogPage({ searchParams }: BlogPageProps) {
       
       <main className="flex-1">
         {/* Page Header */}
-        <section className="border-b border-border">
-          <div className="mx-auto max-w-6xl px-4 py-16 md:py-20">
+        <section className="border-b border-primary/20 relative overflow-hidden">
+          <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_left,_var(--tw-gradient-stops))] from-primary/20 via-transparent to-transparent" />
+          <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_bottom_right,_var(--tw-gradient-stops))] from-accent/10 via-transparent to-transparent" />
+          
+          <div className="relative mx-auto max-w-6xl px-4 py-16 md:py-20">
             <h1 className="font-heading text-4xl md:text-5xl font-bold text-foreground mb-4">
-              Blog Spawalniczy
+              Blog{' '}
+              <span className="bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
+                Spawalniczy
+              </span>
             </h1>
             <p className="text-lg text-muted-foreground max-w-2xl mb-8">
               Odkryj swiat spawania - od podstawowych technik po zaawansowane metody. 
@@ -37,13 +43,16 @@ export default async function BlogPage({ searchParams }: BlogPageProps) {
         </section>
 
         {/* Blog Posts Grid */}
-        <section className="py-12 md:py-16">
-          <div className="mx-auto max-w-6xl px-4">
+        <section className="py-12 md:py-16 relative">
+          <div className="absolute top-1/4 left-0 w-96 h-96 bg-primary/5 rounded-full blur-3xl" />
+          <div className="absolute bottom-1/4 right-0 w-96 h-96 bg-accent/5 rounded-full blur-3xl" />
+          
+          <div className="relative mx-auto max-w-6xl px-4">
             {category !== 'Wszystkie' && (
               <div className="mb-8">
                 <p className="text-muted-foreground">
                   Wyswietlanie {posts.length} {posts.length === 1 ? 'artykulu' : 'artykulow'} w kategorii{' '}
-                  <span className="text-primary font-medium">{category}</span>
+                  <span className="bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent font-semibold">{category}</span>
                 </p>
               </div>
             )}
@@ -56,9 +65,9 @@ export default async function BlogPage({ searchParams }: BlogPageProps) {
               </div>
             ) : (
               <div className="text-center py-16">
-                <div className="inline-flex h-20 w-20 items-center justify-center rounded-full bg-muted mb-6">
+                <div className="inline-flex h-20 w-20 items-center justify-center rounded-full bg-gradient-to-br from-primary/20 to-accent/20 border border-primary/30 mb-6">
                   <svg
-                    className="h-10 w-10 text-muted-foreground"
+                    className="h-10 w-10 text-primary"
                     viewBox="0 0 24 24"
                     fill="none"
                     stroke="currentColor"

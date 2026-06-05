@@ -1,32 +1,21 @@
 import Link from 'next/link'
+import Image from 'next/image'
 
 export function Header() {
   return (
-    <header className="sticky top-0 z-50 border-b border-border bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
+    <header className="sticky top-0 z-50 border-b border-primary/20 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
       <div className="mx-auto flex h-16 max-w-6xl items-center justify-between px-4">
         <Link href="/" className="flex items-center gap-3 group">
-          <div className="relative flex h-10 w-10 items-center justify-center rounded-lg bg-primary">
-            <svg
-              className="h-6 w-6 text-primary-foreground"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              strokeWidth="2"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-            >
-              <path d="M12 2v8" />
-              <path d="M4.93 10.93l2.83 2.83" />
-              <path d="M2 18h4" />
-              <path d="M18 18h4" />
-              <path d="M19.07 10.93l-2.83 2.83" />
-              <path d="M12 14l-4 8" />
-              <path d="M12 14l4 8" />
-            </svg>
+          <div className="relative">
+            <div className="absolute inset-0 bg-primary/20 blur-xl rounded-full opacity-0 group-hover:opacity-100 transition-opacity" />
+            <Image
+              src="/logo.png"
+              alt="TechSpaw"
+              width={120}
+              height={40}
+              className="relative h-10 w-auto drop-shadow-[0_0_10px_rgba(0,255,255,0.5)]"
+            />
           </div>
-          <span className="font-heading text-xl font-bold tracking-tight text-foreground group-hover:text-primary transition-colors">
-            SpawBlog
-          </span>
         </Link>
 
         <nav className="hidden items-center gap-8 md:flex">
@@ -58,7 +47,7 @@ export function Header() {
 
         <Link
           href="/blog"
-          className="inline-flex h-10 items-center justify-center rounded-lg bg-primary px-6 text-sm font-medium text-primary-foreground transition-colors hover:bg-primary/90"
+          className="inline-flex h-10 items-center justify-center rounded-lg bg-gradient-to-r from-primary to-accent px-6 text-sm font-semibold text-primary-foreground transition-all hover:shadow-[0_0_20px_rgba(0,255,255,0.5)] hover:scale-105"
         >
           Czytaj Blog
         </Link>
