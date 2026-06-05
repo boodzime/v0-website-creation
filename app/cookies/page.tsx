@@ -1,6 +1,7 @@
 import { Header } from '@/components/header'
 import { Footer } from '@/components/footer'
 import { FloatingPhoneButton } from '@/components/contact-section'
+import { CTABanner } from '@/components/cta-section'
 import Image from 'next/image'
 
 export const metadata = {
@@ -187,6 +188,9 @@ export default function CookiesPage() {
             </div>
           </div>
         </section>
+
+        {/* CTA Section */}
+        <CTABanner />
       </main>
 
       <Footer />

@@ -4,6 +4,7 @@ import { notFound } from 'next/navigation'
 import { Header } from '@/components/header'
 import { Footer } from '@/components/footer'
 import { BlogCard } from '@/components/blog-card'
+import { CTABanner } from '@/components/cta-section'
 import { getPostBySlug, blogPosts } from '@/lib/blog-data'
 import type { Metadata } from 'next'
 
@@ -322,6 +323,9 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
             </div>
           </section>
         )}
+
+        {/* CTA Section */}
+        <CTABanner />
       </main>
 
       <Footer />

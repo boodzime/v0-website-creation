@@ -10,6 +10,7 @@ import {
   CTASection 
 } from '@/components/animated-sections'
 import { ContactSection, FloatingPhoneButton } from '@/components/contact-section'
+import { CTABanner } from '@/components/cta-section'
 
 export default function HomePage() {
   const featuredPosts = getFeaturedPosts()
@@ -183,6 +184,7 @@ export default function HomePage() {
         <StatsSection />
         <FeaturedPostsSection posts={featuredPosts} />
         <RecentPostsSection posts={recentPosts} />
+        <CTABanner />
         <ContactSection />
         <CTASection />
       </main>
