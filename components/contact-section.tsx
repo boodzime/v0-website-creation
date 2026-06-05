@@ -119,21 +119,21 @@ export function ContactSection() {
     {
       icon: MailIcon,
       label: 'Email',
-      value: 'kontakt@techspaw.pl',
-      href: 'mailto:kontakt@techspaw.pl',
+      value: 'techspaw@o2.pl',
+      href: 'mailto:techspaw@o2.pl',
       color: 'accent'
     },
     {
       icon: MapPinIcon,
       label: 'Adres',
-      value: 'ul. Spawalnicza 15, 00-001 Warszawa',
+      value: 'Nad Zatoka 4/6, 87-100 Torun',
       href: null,
       color: 'primary'
     },
     {
       icon: ClockIcon,
       label: 'Godziny pracy',
-      value: 'Pon-Pt: 8:00 - 18:00',
+      value: 'Pon-Sob: 8:00 - 17:00',
       href: null,
       color: 'accent'
     },
@@ -299,8 +299,8 @@ export function ContactSection() {
                     
                     {/* Tooltip */}
                     <div className="absolute bottom-full left-1/2 -translate-x-1/2 mb-2 px-4 py-2 bg-card border border-primary/30 rounded-lg shadow-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300 whitespace-nowrap">
-                      <p className="text-sm font-medium text-foreground">TechSpaw HQ</p>
-                      <p className="text-xs text-muted-foreground">ul. Spawalnicza 15</p>
+                      <p className="text-sm font-medium text-foreground">TECHSPAW</p>
+                      <p className="text-xs text-muted-foreground">Nad Zatoka 4/6, Torun</p>
                       <div className="absolute top-full left-1/2 -translate-x-1/2 border-8 border-transparent border-t-card" />
                     </div>
                   </div>
@@ -329,17 +329,17 @@ export function ContactSection() {
                     <MapPinIcon className="w-5 h-5 text-primary" />
                   </div>
                   <div>
-                    <p className="text-sm font-medium text-foreground">Warszawa, Polska</p>
-                    <p className="text-xs text-muted-foreground">ul. Spawalnicza 15</p>
+                    <p className="text-sm font-medium text-foreground">Torun, Polska</p>
+                    <p className="text-xs text-muted-foreground">Nad Zatoka 4/6, 87-100</p>
                   </div>
                 </div>
                 <a 
-                  href="https://maps.google.com/?q=Warszawa+Polska" 
+                  href="https://maps.google.com/?q=Nad+Zatoka+4/6+Torun+87-100+Polska" 
                   target="_blank"
                   rel="noopener noreferrer"
                   className="px-4 py-2 rounded-lg bg-primary/10 border border-primary/30 text-primary text-sm font-medium hover:bg-primary/20 hover:border-primary/50 transition-all duration-300 hover:shadow-[0_0_15px_rgba(0,255,255,0.3)]"
                 >
-                  Otwórz mape
+                  Otworz mape
                 </a>
               </div>
             </div>
