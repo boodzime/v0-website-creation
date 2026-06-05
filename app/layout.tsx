@@ -59,7 +59,7 @@ export const metadata: Metadata = {
     siteName: 'TechSpaw',
     images: [
       {
-        url: '/og-image.png',
+        url: 'https://techspaw.pl/og-image.png',
         width: 1200,
         height: 630,
         alt: 'TechSpaw - Blog Spawalniczy',
@@ -73,7 +73,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'TechSpaw - Blog Spawalniczy',
     description: 'Profesjonalny blog o spawaniu - techniki MIG, TIG, MMA, porady dla spawaczy.',
-    images: ['/og-image.png'],
+    images: ['https://techspaw.pl/og-image.png'],
     creator: '@techspaw',
   },
   robots: {
