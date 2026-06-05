@@ -13,6 +13,443 @@ export interface BlogPost {
 
 export const blogPosts: BlogPost[] = [
   {
+    id: '11',
+    slug: 'spawanie-rur-stalowych-kompletny-przewodnik',
+    title: 'Spawanie rur stalowych - kompletny przewodnik technik i pozycji',
+    excerpt: 'Spawanie rur to jedna z najtrudniejszych umiejętności spawalniczych. Poznaj techniki, pozycje i sekrety spawania rurociągów.',
+    content: \`
+## Spawanie rur - wyzwanie dla spawacza
+
+Spawanie rur stalowych wymaga opanowania wszystkich pozycji spawalniczych, ponieważ rura "się nie kręci" - to spawacz musi dostosować się do jej położenia.
+
+## Pozycje spawania rur
+
+### 1G - Rura obrotowa (najłatwiejsza)
+- Rura obraca się, spawacz pracuje w pozycji podłogowej
+- Idealna do nauki
+- Stosowana przy dużych średnicach w warsztacie
+
+### 2G - Rura pionowa
+- Oś rury pionowo
+- Spawanie w pozycji poziomej
+- Łatwiejsza niż 5G i 6G
+
+### 5G - Rura pozioma nieruchoma
+- Oś rury poziomo, rura nie obraca się
+- Spawacz musi wykonać pełne obejście
+- Pozycje: podłogowa → pionowa → pułapowa → pionowa
+
+### 6G - Rura pod kątem 45°
+- Najtrudniejsza pozycja egzaminacyjna
+- Łączy wszystkie trudności
+- Wymagana przy certyfikacji
+
+## Przygotowanie złącza rurowego
+
+### Ukosowanie krawędzi
+
+| Grubość ścianki | Typ rowka | Kąt | Próg |
+|-----------------|-----------|-----|------|
+| do 3mm | Bez ukosowania | - | - |
+| 3-6mm | V jednostronny | 30-35° | 1-2mm |
+| 6-12mm | V jednostronny | 30-35° | 2-3mm |
+| pow. 12mm | U lub J | wg WPS | 2-3mm |
+
+### Szczelina między rurami
+- Typowo 2-3mm dla przetopienia
+- Zależy od metody i średnicy
+
+### Centrowanie rur
+- Centrowniki wewnętrzne lub zewnętrzne
+- Maksymalne przesunięcie: 10% grubości ścianki
+- Sczepianie co 90° (4 punkty)
+
+## Techniki spawania rur
+
+### Przetop (root pass)
+Najważniejsza warstwa - decyduje o szczelności.
+
+**Metoda TIG:**
+- Najwyższa jakość
+- Pełna kontrola penetracji
+- Stosowana w gazownictwie i energetyce
+
+**Metoda MMA (celulozowa):**
+- Elektrody E6010/E7010
+- Głęboka penetracja
+- Szybkość wykonania
+
+**Metoda MIG/MAG STT:**
+- Kontrola transferu powierzchniowego
+- Mniejsze ciepło wprowadzone
+
+### Warstwy wypełniające
+- MMA z elektrodami zasadowymi
+- MIG/MAG (wydajność)
+- Uwaga na międzyściegowe oczyszczanie!
+
+### Warstwa licowa
+- Równomierna, estetyczna
+- Odpowiednia nadlewka (1-3mm)
+- Bez podtopień
+
+## Spawanie rur metodą TIG
+
+### Parametry orientacyjne
+
+| Średnica/ścianka | Prąd | Spoiwo | Gaz |
+|------------------|------|--------|-----|
+| Ø25/2mm | 40-60A | 1.6mm | 6-8 l/min |
+| Ø50/3mm | 60-90A | 2.0mm | 8-10 l/min |
+| Ø100/4mm | 80-120A | 2.4mm | 10-12 l/min |
+
+### Technika przetopowa TIG
+1. Prowadź uchwyt pod kątem 10-15° do osi rury
+2. Spoiwo dodawaj krótkimi ruchami
+3. Utrzymuj stałą szczelinę łuku
+4. Kontroluj jeziorko - powinno być owalne
+
+## Spawanie rur metodą MMA
+
+### Przetop elektrodami celulozowymi
+1. Kąt elektrody 5-10° w dół
+2. Technika "keyhole" - utrzymuj otwór
+3. Ruch prosty lub lekko wahadłowy
+4. Prąd 60-90A dla Ø3.2mm
+
+### Wypełnienie i lico
+- Elektrody zasadowe (E7018)
+- Technika strunowa lub wahadłowa
+- Szerokość ściegu: max 3x średnica elektrody
+
+## Kontrola jakości
+
+### Badania nieniszczące rur
+- RT (radiografia) - standard w gazownictwie
+- UT (ultradźwięki) - grube ścianki
+- PT (penetranty) - wykrywanie pęknięć powierzchniowych
+
+### Typowe wady i przyczyny
+- **Brak przetopu** - za mały prąd, za duża szczelina
+- **Podtopienia** - za duży prąd, zła technika
+- **Wtrącenia żużla** - niedokładne czyszczenie międzywarstwowe
+- **Pęknięcia** - szybkie chłodzenie, zły materiał dodatkowy
+
+## Podsumowanie
+
+Spawanie rur wymaga praktyki i cierpliwości. Zacznij od pozycji 1G i 2G, stopniowo przechodząc do 5G. Certyfikat 6G otwiera drzwi do najlepiej płatnych prac spawalniczych.
+    \`,
+    category: 'Techniki',
+    date: '2026-02-01',
+    readTime: '12 min',
+    image: '/blog/spawanie-rur.png',
+    featured: true
+  },
+  {
+    id: '12',
+    slug: 'spawanie-rur-ze-stali-nierdzewnej',
+    title: 'Spawanie rur ze stali nierdzewnej - technika orbitalna i ręczna',
+    excerpt: 'Rury ze stali nierdzewnej wymagają szczególnej precyzji. Poznaj tajniki spawania rurociągów kwasoodpornych.',
+    content: \`
+## Specyfika spawania rur nierdzewnych
+
+Rury ze stali nierdzewnej stosowane są w przemyśle spożywczym, farmaceutycznym, chemicznym i energetyce. Wymagają szczególnej uwagi przy spawaniu.
+
+## Wyzwania przy rurach nierdzewnych
+
+### 1. Ochrona przed utlenianiem
+- Wewnętrzna strona spoiny wymaga ochrony gazem
+- Przebarwienia = utrata odporności korozyjnej
+- Formierowanie (backing gas) obowiązkowe
+
+### 2. Kontrola ciepła
+- Niska przewodność cieplna
+- Ryzyko przegrzania
+- Odkształcenia termiczne
+
+### 3. Zanieczyszczenia
+- Węgiel powoduje korozję międzykrystaliczną
+- Osobne narzędzia tylko do stali nierdzewnej
+- Czyste rękawice (bez tłuszczu!)
+
+## Przygotowanie do spawania
+
+### Czyszczenie
+1. Odtłuszczanie acetonem
+2. Szczotkowanie (szczotka ze stali nierdzewnej!)
+3. Czyszczenie tuż przed spawaniem
+
+### Przygotowanie rowka
+- Krawędzie fazowane pod kątem 30-37.5°
+- Próg 1-1.5mm
+- Szczelina 1-2mm (zależy od średnicy)
+
+### System formierowania
+
+**Gazy formierujące:**
+- Argon (standard)
+- Azot (tańszy, ale gorsze wyniki)
+- Mieszanka Ar/H2 (lepsze oczyszczanie)
+
+**Techniki formierowania:**
+- Zaślepki z przepływem gazu
+- Taśmy rozpuszczalne
+- Baloniki formierujące
+- Komory formierujące dla małych średnic
+
+**Przepływ gazu formierującego:** 5-15 l/min (zależnie od średnicy)
+
+## Spawanie ręczne TIG
+
+### Parametry dla rur nierdzewnych
+
+| Grubość | Prąd DC(-) | Elektroda | Spoiwo |
+|---------|------------|-----------|--------|
+| 1.5mm | 30-50A | 1.6mm | 1.6mm |
+| 2mm | 40-70A | 1.6mm | 2.0mm |
+| 3mm | 60-100A | 2.4mm | 2.4mm |
+
+### Technika spawania
+1. **Niski prąd** - unikaj przegrzania
+2. **Krótki łuk** - 1-2mm
+3. **Szybki ruch** - minimalizuj strefę wpływu ciepła
+4. **Chłodzenie** - przerwy między ściegami
+
+### Pozycja 6G - wskazówki
+- Zaczynaj od pozycji godziny 6
+- Spawaj w górę po obu stronach
+- Zachowaj symetrię cieplną
+- Kończ w pozycji 12
+
+## Spawanie orbitalne
+
+### Czym jest spawanie orbitalne?
+Automatyczne spawanie TIG, gdzie głowica obraca się wokół rury. Standard w przemyśle farmaceutycznym i półprzewodnikowym.
+
+### Zalety spawania orbitalnego
+- Powtarzalność 100%
+- Brak wpływu umiejętności operatora
+- Dokumentacja procesu
+- Spawanie w trudno dostępnych miejscach
+
+### Kiedy stosować?
+- Duża ilość złączy
+- Wysokie wymagania jakościowe
+- Rury o małych średnicach (6-168mm)
+- Przemysł regulowany (pharma, food)
+
+## Ocena jakości spoiny
+
+### Wymagania wizualne
+- Brak przebarwień (złoty OK, niebieski - uwaga, czarny - do naprawy)
+- Równomierna powierzchnia
+- Brak wad widocznych
+
+### Skala przebarwień
+| Kolor | Tlen (ppm) | Ocena |
+|-------|------------|-------|
+| Słomkowy/złoty | <25 | Doskonała |
+| Jasnoniebieski | 25-100 | Akceptowalna* |
+| Ciemnoniebieski | 100-300 | Wymagana ocena |
+| Szary/czarny | >300 | Niedopuszczalna |
+
+*zależnie od wymagań
+
+### Badania nieniszczące
+- Boroskopia - wizualna kontrola wnętrza
+- Radiografia - wykrywanie wad wewnętrznych
+- Test szczelności - helowy lub ciśnieniowy
+
+## Typowe zastosowania
+
+### Przemysł spożywczy
+- Rury DN25-DN100
+- Wymagania 3A, EHEDG
+- Polerowane wnętrze (Ra<0.8μm)
+
+### Przemysł farmaceutyczny
+- Surowe wymagania ASME BPE
+- Spawanie orbitalne obowiązkowe
+- Pełna dokumentacja
+
+### Instalacje chemiczne
+- Stal 316L lub wyższa
+- Odporność na korozję
+- Badania PT i RT
+
+## Podsumowanie
+
+Spawanie rur ze stali nierdzewnej wymaga wiedzy, doświadczenia i odpowiedniego sprzętu. Kluczowe jest formierowanie i kontrola ciepła. Dla produkcji seryjnej spawanie orbitalne jest standardem.
+    \`,
+    category: 'Techniki',
+    date: '2026-01-28',
+    readTime: '14 min',
+    image: '/blog/rury-nierdzewne.png',
+    featured: false
+  },
+  {
+    id: '13',
+    slug: 'spawanie-instalacji-gazowych-wymagania-i-certyfikacja',
+    title: 'Spawanie instalacji gazowych - wymagania, uprawnienia i praktyka',
+    excerpt: 'Instalacje gazowe wymagają najwyższej jakości spoin. Dowiedz się, jakie uprawnienia są potrzebne i jak spawać rurociągi gazowe.',
+    content: \`
+## Spawanie instalacji gazowych - wysokie wymagania
+
+Spawanie rurociągów gazowych należy do najodpowiedzialniejszych prac spawalniczych. Błędy mogą prowadzić do katastrof - wycieków, wybuchów i strat ludzkich.
+
+## Wymagania prawne i certyfikacja
+
+### Uprawnienia spawacza
+W Polsce spawacz musi posiadać:
+
+**Certyfikat wg PN-EN ISO 9606-1:**
+- Zakres materiałowy (stal węglowa, nierdzewna)
+- Metoda spawania (111, 135, 141)
+- Pozycja (5G, 6G)
+- Grubość ścianki
+
+**Świadectwo kwalifikacyjne UDT/TDT:**
+- Wymagane dla urządzeń ciśnieniowych
+- Egzamin praktyczny i teoretyczny
+- Ważność 2 lata (przedłużenie przez pracodawcę)
+
+### Technologia spawania (WPS/WPQR)
+- WPS - Specyfikacja Technologii Spawania
+- WPQR - Protokół kwalifikowania technologii
+- Obowiązkowe dla wszystkich złączy gazowych
+
+## Rodzaje instalacji gazowych
+
+### Gazociągi przesyłowe
+- Wysokie ciśnienie (>1.6 MPa)
+- Średnice DN100-DN1200
+- Spawanie terenowe
+- Norma: PN-EN 12732
+
+### Sieci dystrybucyjne
+- Średnie ciśnienie (do 1.6 MPa)
+- Średnice DN25-DN300
+- Stal lub PE (polietylen)
+
+### Instalacje wewnętrzne
+- Niskie ciśnienie (do 5 kPa)
+- Rury stalowe DN15-DN50
+- Norma: PN-EN 1775
+
+## Przygotowanie złączy
+
+### Cięcie rur
+- Cięcie mechaniczne (przecinarki orbitalne)
+- Zakaz cięcia palnikiem!
+- Szlifowanie krawędzi
+
+### Ukosowanie
+- Kąt 30-37.5° (V-groove)
+- Próg 1.6-2.4mm
+- Maszyny do ukosowania (beveling)
+
+### Centrowanie
+- Centrowniki wewnętrzne
+- Maksymalna niezgodność: 1.6mm
+- Sczepianie: minimum 4 punkty
+
+## Metody spawania
+
+### MMA - elektrody celulozowe
+Tradycyjna metoda dla gazociągów.
+
+**Zalety:**
+- Praca w terenie
+- Głęboka penetracja
+- Spawanie pionowe w dół
+
+**Elektrody:**
+- E6010/E7010 - przetop
+- E7018 - wypełnienie i lico
+
+### TIG + MMA (kombinacja)
+- TIG na przetop (najwyższa jakość)
+- MMA na wypełnienie (wydajność)
+- Standard dla krytycznych złączy
+
+### Spawanie automatyczne
+- Systemy do spawania obwodowego
+- Stosowane przy długich odcinkach
+- Wysoka wydajność i powtarzalność
+
+## Kontrola jakości
+
+### Badania nieniszczące (NDT)
+Każde złącze musi być zbadane!
+
+**100% złączy:**
+- Wizualne (VT)
+- Radiograficzne (RT) lub ultradźwiękowe (UT)
+
+**Wyrywkowo:**
+- Penetracyjne (PT)
+- Magnetyczne (MT)
+
+### Próba ciśnieniowa
+- Ciśnienie próbne: 1.5x ciśnienie robocze
+- Czas próby: minimum 24h dla nowych gazociągów
+- Medium: woda lub powietrze
+
+### Kryteria akceptacji
+Według PN-EN ISO 5817:
+- Poziom jakości B (najwyższy)
+- Brak pęknięć, brak przepaleń
+- Minimalne porowatości
+
+## Bezpieczeństwo
+
+### Zagrożenia specyficzne
+- Atmosfera wybuchowa
+- Praca w wykopach
+- Strefa zagrożenia gazem
+
+### Środki ochrony
+- Detektor gazu (obowiązkowy!)
+- Wentylacja wykopu
+- Straż pożarna w gotowości
+- Zakaz spawania przy nieszczelności
+
+### Procedury awaryjne
+- Plan ewakuacji
+- Łączność z pogotowiem gazowym
+- Znajomość lokalizacji zaworów
+
+## Spawanie naprawcze
+
+### Naprawy pod ciśnieniem
+- Specjalistyczne techniki (hot tapping)
+- Wymagane specjalne uprawnienia
+- Rygorystyczne procedury
+
+### Naprawy standardowe
+- Odcięcie gazu
+- Odzazotowanie odcinka
+- Spawanie jak nowego złącza
+- Pełna kontrola NDT
+
+## Podsumowanie
+
+Spawanie instalacji gazowych wymaga:
+1. Odpowiednich uprawnień (certyfikaty, UDT)
+2. Zatwierdzonej technologii (WPS)
+3. Najwyższej jakości wykonania
+4. Kompleksowej kontroli (NDT, próby)
+5. Przestrzegania procedur bezpieczeństwa
+
+Nie ma miejsca na kompromisy - od jakości spoiny zależy bezpieczeństwo ludzi.
+    \`,
+    category: 'Techniki',
+    date: '2026-01-25',
+    readTime: '13 min',
+    image: '/blog/instalacje-gazowe.png',
+    featured: false
+  },
+  {
     id: '7',
     slug: 'ile-kosztuje-spawanie-cennik-uslug-2026',
     title: 'Ile kosztuje spawanie w 2026? Cennik usług spawalniczych',
