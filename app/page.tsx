@@ -9,6 +9,7 @@ import {
   RecentPostsSection, 
   CTASection 
 } from '@/components/animated-sections'
+import { ContactSection, FloatingPhoneButton } from '@/components/contact-section'
 
 export default function HomePage() {
   const featuredPosts = getFeaturedPosts()
@@ -167,10 +168,12 @@ export default function HomePage() {
         <StatsSection />
         <FeaturedPostsSection posts={featuredPosts} />
         <RecentPostsSection posts={recentPosts} />
+        <ContactSection />
         <CTASection />
       </main>
 
       <Footer />
+      <FloatingPhoneButton />
     </div>
   )
 }
