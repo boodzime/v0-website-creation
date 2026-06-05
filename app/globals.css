@@ -289,3 +289,158 @@
 .neon-border:hover::before {
   opacity: 1;
 }
+
+/* Page Loader Animations */
+@keyframes spark {
+  0% {
+    opacity: 0;
+    transform: scale(0) translate(0, 0);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1) translate(var(--tx, 10px), var(--ty, -20px));
+  }
+  100% {
+    opacity: 0;
+    transform: scale(0) translate(var(--tx, 20px), var(--ty, -40px));
+  }
+}
+
+@keyframes weld-glow {
+  0%, 100% {
+    opacity: 0.3;
+    transform: translate(-50%, -25%) scale(1);
+  }
+  50% {
+    opacity: 0.8;
+    transform: translate(-50%, -25%) scale(1.3);
+  }
+}
+
+@keyframes welder-work {
+  0%, 100% {
+    transform: translateX(0) rotate(0deg);
+  }
+  25% {
+    transform: translateX(-2px) rotate(-1deg);
+  }
+  75% {
+    transform: translateX(2px) rotate(1deg);
+  }
+}
+
+@keyframes torch-shake {
+  0%, 100% {
+    transform: translate(0, 0) rotate(0deg);
+  }
+  25% {
+    transform: translate(1px, -1px) rotate(0.5deg);
+  }
+  50% {
+    transform: translate(-1px, 1px) rotate(-0.5deg);
+  }
+  75% {
+    transform: translate(1px, 0.5px) rotate(0.3deg);
+  }
+}
+
+@keyframes visor-glow {
+  0%, 100% {
+    fill: oklch(0.10 0.08 195);
+  }
+  50% {
+    fill: oklch(0.20 0.15 195);
+  }
+}
+
+@keyframes arc-flicker {
+  0%, 100% {
+    opacity: 0.9;
+    transform: scale(1);
+  }
+  25% {
+    opacity: 1;
+    transform: scale(1.1);
+  }
+  50% {
+    opacity: 0.7;
+    transform: scale(0.95);
+  }
+  75% {
+    opacity: 1;
+    transform: scale(1.05);
+  }
+}
+
+@keyframes flying-spark {
+  0% {
+    opacity: 1;
+    transform: translate(0, 0) scale(1);
+  }
+  100% {
+    opacity: 0;
+    transform: translate(var(--spark-x, 50px), var(--spark-y, -50px)) scale(0);
+  }
+}
+
+@keyframes weld-line {
+  0% {
+    stroke-dasharray: 0 100;
+    stroke-dashoffset: 0;
+  }
+  100% {
+    stroke-dasharray: 30 100;
+    stroke-dashoffset: 0;
+  }
+}
+
+@keyframes outer-spark {
+  0% {
+    opacity: 1;
+    transform: translate(-50%, -50%) rotate(var(--angle, 0deg)) translateY(0) scale(1);
+  }
+  100% {
+    opacity: 0;
+    transform: translate(-50%, -50%) rotate(var(--angle, 0deg)) translateY(-80px) scale(0);
+  }
+}
+
+.animate-spark {
+  --tx: calc((var(--random, 0.5) - 0.5) * 40px);
+  --ty: calc(-20px - var(--random, 0.5) * 30px);
+  animation: spark 1.5s ease-out infinite;
+}
+
+.animate-weld-glow {
+  animation: weld-glow 0.5s ease-in-out infinite;
+}
+
+.animate-welder-work {
+  animation: welder-work 0.3s ease-in-out infinite;
+  transform-origin: center bottom;
+}
+
+.animate-torch-shake {
+  animation: torch-shake 0.1s ease-in-out infinite;
+  transform-origin: left center;
+}
+
+.animate-visor-glow {
+  animation: visor-glow 0.8s ease-in-out infinite;
+}
+
+.animate-arc-flicker {
+  animation: arc-flicker 0.15s ease-in-out infinite;
+}
+
+.animate-flying-spark {
+  animation: flying-spark 0.8s ease-out infinite;
+}
+
+.animate-weld-line {
+  animation: weld-line 2s ease-out forwards;
+}
+
+.animate-outer-spark {
+  animation: outer-spark 1s ease-out infinite;
+}
