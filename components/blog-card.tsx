@@ -11,30 +11,33 @@ export function BlogCard({ post, featured = false }: BlogCardProps) {
   if (featured) {
     return (
       <Link href={`/blog/${post.slug}`} className="group block">
-        <article className="relative overflow-hidden rounded-2xl border border-primary/20 bg-card transition-all duration-300 hover:border-primary/50 hover:shadow-[0_0_30px_rgba(0,255,255,0.15)]">
+        <article className="relative overflow-hidden rounded-2xl border border-primary/20 bg-card transition-all duration-500 hover:border-primary/50 hover:shadow-[0_0_40px_rgba(0,255,255,0.2)] hover-lift">
           <div className="grid md:grid-cols-2">
             <div className="relative aspect-video md:aspect-auto md:h-full overflow-hidden bg-muted">
               <Image
                 src={post.image}
                 alt={post.title}
                 fill
-                className="object-cover transition-transform duration-500 group-hover:scale-105"
+                className="object-cover transition-transform duration-700 group-hover:scale-110"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-background/60 via-transparent to-transparent md:bg-gradient-to-r" />
+              
+              {/* Animated overlay on hover */}
+              <div className="absolute inset-0 bg-gradient-to-r from-primary/10 to-accent/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
             </div>
             <div className="flex flex-col justify-center p-6 md:p-8">
               <div className="flex items-center gap-3 mb-4">
-                <span className="inline-flex items-center rounded-full bg-gradient-to-r from-primary/20 to-accent/20 border border-primary/30 px-3 py-1 text-xs font-medium text-primary">
+                <span className="inline-flex items-center rounded-full bg-gradient-to-r from-primary/20 to-accent/20 border border-primary/30 px-3 py-1 text-xs font-medium text-primary group-hover:shadow-[0_0_15px_rgba(0,255,255,0.3)] transition-all duration-300">
                   {post.category}
                 </span>
                 <span className="text-xs text-muted-foreground">
                   {post.readTime} czytania
                 </span>
               </div>
-              <h2 className="font-heading text-2xl md:text-3xl font-bold text-foreground mb-3 group-hover:bg-gradient-to-r group-hover:from-primary group-hover:to-accent group-hover:bg-clip-text group-hover:text-transparent transition-all line-clamp-2">
+              <h2 className="font-heading text-2xl md:text-3xl font-bold text-foreground mb-3 group-hover:text-gradient-animate transition-all line-clamp-2">
                 {post.title}
               </h2>
-              <p className="text-muted-foreground mb-6 line-clamp-3">
+              <p className="text-muted-foreground mb-6 line-clamp-3 group-hover:text-foreground/80 transition-colors duration-300">
                 {post.excerpt}
               </p>
               <div className="flex items-center justify-between">
@@ -45,15 +48,18 @@ export function BlogCard({ post, featured = false }: BlogCardProps) {
                     year: 'numeric'
                   })}
                 </time>
-                <span className="inline-flex items-center gap-2 text-sm font-semibold bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent group-hover:gap-3 transition-all">
+                <span className="inline-flex items-center gap-2 text-sm font-semibold text-gradient-animate group-hover:gap-4 transition-all duration-300">
                   Czytaj wiecej
-                  <svg className="h-4 w-4 text-primary" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                  <svg className="h-4 w-4 text-primary group-hover:translate-x-1 transition-transform duration-300" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
                     <path d="M5 12h14M12 5l7 7-7 7" />
                   </svg>
                 </span>
               </div>
             </div>
           </div>
+          
+          {/* Animated border glow */}
+          <div className="absolute inset-0 rounded-2xl border-2 border-transparent group-hover:border-primary/30 transition-all duration-500 pointer-events-none" />
         </article>
       </Link>
     )
@@ -61,17 +67,21 @@ export function BlogCard({ post, featured = false }: BlogCardProps) {
 
   return (
     <Link href={`/blog/${post.slug}`} className="group block h-full">
-      <article className="relative h-full overflow-hidden rounded-xl border border-primary/20 bg-card transition-all duration-300 hover:border-primary/50 hover:shadow-[0_0_25px_rgba(0,255,255,0.15)]">
+      <article className="relative h-full overflow-hidden rounded-xl border border-primary/20 bg-card transition-all duration-500 hover:border-primary/50 hover:shadow-[0_0_30px_rgba(0,255,255,0.2)] hover-lift">
         <div className="relative aspect-video overflow-hidden bg-muted">
           <Image
             src={post.image}
             alt={post.title}
             fill
-            className="object-cover transition-transform duration-500 group-hover:scale-105"
+            className="object-cover transition-transform duration-700 group-hover:scale-110"
           />
           <div className="absolute inset-0 bg-gradient-to-t from-background/80 via-background/20 to-transparent" />
+          
+          {/* Animated shimmer effect on hover */}
+          <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/5 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-1000" />
+          
           <div className="absolute bottom-3 left-3">
-            <span className="inline-flex items-center rounded-full bg-gradient-to-r from-primary to-accent px-3 py-1 text-xs font-semibold text-primary-foreground shadow-[0_0_15px_rgba(0,255,255,0.4)]">
+            <span className="inline-flex items-center rounded-full bg-gradient-to-r from-primary to-accent px-3 py-1 text-xs font-semibold text-primary-foreground shadow-[0_0_15px_rgba(0,255,255,0.4)] group-hover:shadow-[0_0_25px_rgba(0,255,255,0.6)] transition-all duration-300">
               {post.category}
             </span>
           </div>
@@ -88,19 +98,22 @@ export function BlogCard({ post, featured = false }: BlogCardProps) {
             <span>•</span>
             <span>{post.readTime}</span>
           </div>
-          <h3 className="font-heading text-lg font-semibold text-foreground mb-2 group-hover:bg-gradient-to-r group-hover:from-primary group-hover:to-accent group-hover:bg-clip-text group-hover:text-transparent transition-all line-clamp-2">
+          <h3 className="font-heading text-lg font-semibold text-foreground mb-2 group-hover:text-gradient-animate transition-all duration-300 line-clamp-2">
             {post.title}
           </h3>
-          <p className="text-sm text-muted-foreground mb-4 line-clamp-2">
+          <p className="text-sm text-muted-foreground mb-4 line-clamp-2 group-hover:text-foreground/80 transition-colors duration-300">
             {post.excerpt}
           </p>
-          <span className="inline-flex items-center gap-2 text-sm font-semibold bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent group-hover:gap-3 transition-all">
+          <span className="inline-flex items-center gap-2 text-sm font-semibold text-gradient-animate group-hover:gap-4 transition-all duration-300">
             Czytaj wiecej
-            <svg className="h-4 w-4 text-primary" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+            <svg className="h-4 w-4 text-primary group-hover:translate-x-2 transition-transform duration-300" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
               <path d="M5 12h14M12 5l7 7-7 7" />
             </svg>
           </span>
         </div>
+        
+        {/* Animated corner accent */}
+        <div className="absolute top-0 right-0 w-16 h-16 bg-gradient-to-bl from-primary/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 rounded-bl-3xl" />
       </article>
     </Link>
   )
