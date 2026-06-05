@@ -181,6 +181,16 @@ export function Footer() {
               <Link href="/cookies" className="text-sm text-muted-foreground hover:text-primary transition-all duration-300 hover:tracking-wider">
                 Cookies
               </Link>
+              <a
+                href="https://facebook.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Facebook"
+                className="group relative flex items-center justify-center w-9 h-9 rounded-lg border border-primary/20 hover:border-primary/60 transition-all duration-300 hover:scale-110"
+              >
+                <div className="absolute inset-0 bg-primary/20 rounded-lg opacity-0 group-hover:opacity-100 blur-md transition-all duration-300" />
+                <FacebookIcon className="relative w-4 h-4 text-muted-foreground group-hover:text-primary transition-colors duration-300" />
+              </a>
             </div>
           </div>
         </div>
