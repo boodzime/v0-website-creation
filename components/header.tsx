@@ -166,16 +166,16 @@ function HeaderContent() {
       >
         <div className="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-primary/60 to-transparent animate-shimmer" />
         
-        <div className="flex h-14 items-center justify-center px-4">
+        <div className="flex h-20 items-center justify-center px-4">
           <Link href="/" className="flex items-center group">
             <div className="relative">
               <div className="absolute inset-0 bg-primary/30 blur-xl rounded-full opacity-0 group-hover:opacity-100 transition-all duration-500 scale-150" />
               <Image
                 src="/logo.png"
                 alt="TechSpaw"
-                width={140}
-                height={47}
-                className="relative h-9 w-auto drop-shadow-[0_0_8px_rgba(0,255,255,0.5)] group-hover:drop-shadow-[0_0_15px_rgba(0,255,255,0.8)] transition-all duration-300"
+                width={220}
+                height={74}
+                className="relative h-14 w-auto drop-shadow-[0_0_8px_rgba(0,255,255,0.5)] group-hover:drop-shadow-[0_0_15px_rgba(0,255,255,0.8)] transition-all duration-300"
               />
             </div>
           </Link>
@@ -262,8 +262,8 @@ export function Header() {
         </header>
         {/* Mobile Header Skeleton */}
         <header className="md:hidden sticky top-0 z-50 border-b border-primary/10 bg-background/60 backdrop-blur-md">
-          <div className="flex h-14 items-center justify-center px-4">
-            <div className="h-9 w-[140px] bg-muted/20 rounded animate-pulse" />
+          <div className="flex h-20 items-center justify-center px-4">
+            <div className="h-14 w-[220px] bg-muted/20 rounded animate-pulse" />
           </div>
         </header>
         {/* Mobile Bottom Nav Skeleton */}
