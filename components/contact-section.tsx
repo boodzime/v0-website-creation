@@ -1,6 +1,6 @@
 "use client"
 
-import { useEffect, useRef, useState, type FormEvent } from "react"
+import { useEffect, useRef, useState, type FormEvent, type ChangeEvent } from "react"
 
 function useInView(threshold = 0.1) {
   const ref = useRef<HTMLDivElement>(null)
@@ -93,9 +93,82 @@ function MessageIcon({ className }: { className?: string }) {
   )
 }
 
+function CameraIcon({ className }: { className?: string }) {
+  return (
+    <svg className={className} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+      <path d="M14.5 4h-5L7 7H4a2 2 0 0 0-2 2v9a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2h-3l-2.5-3z" />
+      <circle cx="12" cy="13" r="3" />
+    </svg>
+  )
+}
+
+function CheckCircleIcon({ className }: { className?: string }) {
+  return (
+    <svg className={className} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+      <circle cx="12" cy="12" r="10" />
+      <path d="m9 12 2 2 4-4" />
+    </svg>
+  )
+}
+
+function RulerIcon({ className }: { className?: string }) {
+  return (
+    <svg className={className} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+      <path d="M21.3 15.3a2.4 2.4 0 0 1 0 3.4l-2.6 2.6a2.4 2.4 0 0 1-3.4 0L2.7 8.7a2.41 2.41 0 0 1 0-3.4l2.6-2.6a2.41 2.41 0 0 1 3.4 0Z" />
+      <path d="m14.5 12.5 2-2" />
+      <path d="m11.5 9.5 2-2" />
+      <path d="m8.5 6.5 2-2" />
+      <path d="m17.5 15.5 2-2" />
+    </svg>
+  )
+}
+
+function RocketIcon({ className }: { className?: string }) {
+  return (
+    <svg className={className} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+      <path d="M4.5 16.5c-1.5 1.26-2 5-2 5s3.74-.5 5-2c.71-.84.7-2.13-.09-2.91a2.18 2.18 0 0 0-2.91-.09z" />
+      <path d="m12 15-3-3a22 22 0 0 1 2-3.95A12.88 12.88 0 0 1 22 2c0 2.72-.78 7.5-6 11a22.35 22.35 0 0 1-4 2z" />
+      <path d="M9 12H4s.55-3.03 2-4c1.62-1.08 5 0 5 0" />
+      <path d="M12 15v5s3.03-.55 4-2c1.08-1.62 0-5 0-5" />
+    </svg>
+  )
+}
+
+function ShieldCheckIcon({ className }: { className?: string }) {
+  return (
+    <svg className={className} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+      <path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z" />
+      <path d="m9 12 2 2 4-4" />
+    </svg>
+  )
+}
+
+function XIcon({ className }: { className?: string }) {
+  return (
+    <svg className={className} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+      <path d="M18 6 6 18" />
+      <path d="m6 6 12 12" />
+    </svg>
+  )
+}
+
 export function ContactSection() {
   const { ref, isInView } = useInView()
   const [formStatus, setFormStatus] = useState<'idle' | 'sending' | 'sent' | 'error'>('idle')
+  const [uploadedImages, setUploadedImages] = useState<File[]>([])
+  const fileInputRef = useRef<HTMLInputElement>(null)
+
+  const handleImageUpload = (e: ChangeEvent<HTMLInputElement>) => {
+    const files = e.target.files
+    if (files) {
+      const newImages = Array.from(files).slice(0, 5 - uploadedImages.length) // Max 5 images
+      setUploadedImages(prev => [...prev, ...newImages])
+    }
+  }
+
+  const removeImage = (index: number) => {
+    setUploadedImages(prev => prev.filter((_, i) => i !== index))
+  }
 
   const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault()
@@ -104,6 +177,7 @@ export function ContactSection() {
     // Simulate form submission
     setTimeout(() => {
       setFormStatus('sent')
+      setUploadedImages([]) // Clear images on success
       setTimeout(() => setFormStatus('idle'), 3000)
     }, 1500)
   }
@@ -178,6 +252,37 @@ export function ContactSection() {
           >
             Masz pytania dotyczace spawania? Chcesz nawiazac wspolprace? Skontaktuj sie z nami!
           </p>
+
+          {/* 3 Main Advantages */}
+          <div 
+            className={`flex flex-wrap justify-center gap-6 mt-10 ${isInView ? 'animate-fade-in-up' : 'opacity-0'}`}
+            style={{ animationDelay: isInView ? '400ms' : undefined, animationFillMode: 'forwards' }}
+          >
+            {[
+              { icon: RulerIcon, title: 'Bezplatny pomiar', description: 'Dojedziemy i wycenimy za darmo', color: 'primary' },
+              { icon: RocketIcon, title: 'Realizacja do 7 dni', description: 'Szybka realizacja zlecen', color: 'accent' },
+              { icon: ShieldCheckIcon, title: 'Gwarancja montazu', description: 'Pelna gwarancja na wykonanie', color: 'primary' },
+            ].map((advantage, index) => (
+              <div
+                key={advantage.title}
+                className={`group relative flex items-center gap-4 px-6 py-4 rounded-xl border border-${advantage.color}/30 bg-card/50 backdrop-blur-sm hover:border-${advantage.color}/60 hover:shadow-[0_0_25px_rgba(0,255,255,0.2)] transition-all duration-500 hover-lift ${
+                  isInView ? 'animate-scale-in' : 'opacity-0'
+                }`}
+                style={{ 
+                  animationDelay: isInView ? `${index * 150 + 500}ms` : undefined, 
+                  animationFillMode: 'forwards' 
+                }}
+              >
+                <div className={`flex-shrink-0 w-14 h-14 rounded-xl bg-${advantage.color}/10 border border-${advantage.color}/30 flex items-center justify-center group-hover:scale-110 group-hover:shadow-[0_0_20px_rgba(0,255,255,0.4)] transition-all duration-300`}>
+                  <advantage.icon className={`w-7 h-7 text-${advantage.color}`} />
+                </div>
+                <div>
+                  <h3 className="font-semibold text-foreground text-lg">{advantage.title}</h3>
+                  <p className="text-sm text-muted-foreground">{advantage.description}</p>
+                </div>
+              </div>
+            ))}
+          </div>
         </div>
 
         <div className="grid lg:grid-cols-2 gap-8 lg:gap-12">
@@ -446,6 +551,67 @@ export function ContactSection() {
                       placeholder="Napisz swoja wiadomosc..."
                     />
                   </div>
+                </div>
+
+                {/* Image Upload for Quote */}
+                <div className="group">
+                  <label className="block text-sm font-medium text-foreground mb-2">
+                    Zdjecia do wyceny <span className="text-muted-foreground">(opcjonalnie, max 5)</span>
+                  </label>
+                  
+                  {/* Upload Button */}
+                  <input
+                    ref={fileInputRef}
+                    type="file"
+                    accept="image/*"
+                    multiple
+                    onChange={handleImageUpload}
+                    className="hidden"
+                    id="image-upload"
+                  />
+                  <button
+                    type="button"
+                    onClick={() => fileInputRef.current?.click()}
+                    disabled={uploadedImages.length >= 5}
+                    className="w-full py-4 rounded-xl border-2 border-dashed border-primary/30 bg-background/30 text-muted-foreground hover:border-primary/60 hover:bg-primary/5 hover:text-primary transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center gap-3"
+                  >
+                    <CameraIcon className="w-6 h-6" />
+                    <span className="font-medium">
+                      {uploadedImages.length >= 5 ? 'Maksymalna liczba zdjec' : 'Dodaj zdjecie do wyceny'}
+                    </span>
+                  </button>
+
+                  {/* Uploaded Images Preview */}
+                  {uploadedImages.length > 0 && (
+                    <div className="mt-4 flex flex-wrap gap-3">
+                      {uploadedImages.map((file, index) => (
+                        <div 
+                          key={index} 
+                          className="relative group/img w-20 h-20 rounded-lg overflow-hidden border border-primary/30 bg-card/50"
+                        >
+                          <img
+                            src={URL.createObjectURL(file)}
+                            alt={`Zdjecie ${index + 1}`}
+                            className="w-full h-full object-cover"
+                          />
+                          <button
+                            type="button"
+                            onClick={() => removeImage(index)}
+                            className="absolute inset-0 bg-background/80 opacity-0 group-hover/img:opacity-100 transition-opacity duration-200 flex items-center justify-center"
+                          >
+                            <XIcon className="w-6 h-6 text-red-500" />
+                          </button>
+                          <div className="absolute bottom-1 right-1 w-5 h-5 rounded-full bg-primary/80 flex items-center justify-center text-xs text-primary-foreground font-medium">
+                            {index + 1}
+                          </div>
+                        </div>
+                      ))}
+                    </div>
+                  )}
+                  
+                  <p className="mt-2 text-xs text-muted-foreground">
+                    Dodaj zdjecia elementow do spawania - ulatwi to dokladna wycene
+                  </p>
                 </div>
                 
                 {/* Submit Button */}
