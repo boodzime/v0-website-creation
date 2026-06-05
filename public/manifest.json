@@ -1,7 +1,7 @@
 {
-  "name": "TechSpaw",
+  "name": "TechSpaw - Blog Spawalniczy",
   "short_name": "TechSpaw",
-  "description": "Profesjonalny blog o spawaniu - techniki MIG, TIG, MMA, porady dla spawaczy",
+  "description": "Profesjonalny blog o spawaniu - techniki MIG, TIG, MMA, porady dla spawaczy i praktyczna wiedza spawalnicza.",
   "start_url": "/",
   "display": "standalone",
   "background_color": "#0a0a0a",
@@ -19,8 +19,15 @@
       "sizes": "512x512",
       "type": "image/png",
       "purpose": "any maskable"
+    },
+    {
+      "src": "/apple-icon.png",
+      "sizes": "180x180",
+      "type": "image/png",
+      "purpose": "any"
     }
   ],
-  "categories": ["education", "business"],
-  "lang": "pl-PL"
+  "categories": ["education", "technology"],
+  "lang": "pl",
+  "dir": "ltr"
 }
