@@ -7,9 +7,12 @@ import {
   StatsSection, 
   FeaturedPostsSection, 
   RecentPostsSection, 
-  CTASection 
+  CTASection,
+  TestimonialsSection 
 } from '@/components/animated-sections'
 import { ContactSection, FloatingPhoneButton } from '@/components/contact-section'
+import { FAQSection } from '@/components/faq-section'
+import { QuoteCalculator } from '@/components/quote-calculator'
 
 export default function HomePage() {
   const featuredPosts = getFeaturedPosts()
@@ -181,10 +184,13 @@ export default function HomePage() {
 
         {/* Animated sections with scroll-triggered animations */}
         <StatsSection />
+        <TestimonialsSection />
+        <QuoteCalculator />
+        <CTASection />
         <FeaturedPostsSection posts={featuredPosts} />
         <RecentPostsSection posts={recentPosts} />
+        <FAQSection />
         <ContactSection />
-        <CTASection />
       </main>
 
       <Footer />

@@ -6,10 +6,10 @@ import { useState, useEffect } from 'react'
 
 const navItems = [
   { href: '/', label: 'Strona Glowna' },
+  { href: '/uslugi', label: 'Uslugi' },
   { href: '/blog', label: 'Blog' },
   { href: '/blog?kategoria=Techniki', label: 'Techniki' },
   { href: '/blog?kategoria=Sprzet', label: 'Sprzet' },
-  { href: '/blog?kategoria=BHP', label: 'BHP' },
 ]
 
 function FacebookIcon({ className }: { className?: string }) {
