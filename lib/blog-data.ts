@@ -500,10 +500,305 @@ Przeplyw: 12-18 l/min
     date: '2023-12-15',
     readTime: '10 min',
     image: '/blog/aluminium.png'
+  },
+  {
+    id: '7',
+    slug: 'spawanie-rur-kompletny-poradnik',
+    title: 'Spawanie Rur - Kompletny Poradnik od Podstaw do Certyfikacji',
+    excerpt: 'Spawanie rur to jedno z najbardziej wymagajacych zadan spawalniczych. Poznaj techniki, pozycje i sekrety profesjonalnych spawaczy rurarzy.',
+    content: `
+## Wprowadzenie do spawania rur
+
+Spawanie rur to specjalistyczna dziedzina, ktora wymaga wyjatkowych umiejetnosci. Rurociagi transportuja gaz, rope, wode i inne media - kazdy blad moze prowadzic do katastrofalnych skutkow.
+
+## Dlaczego spawanie rur jest trudne?
+
+- **Zmienne pozycje** - spawacz musi pracowac w pozycji plaskiej, pionowej i pulapowej podczas jednego zlacza
+- **Dostep** - czesto ograniczony, praca w ciasnych przestrzeniach
+- **Odpowiedzialnosc** - spoiny podlegaja rygorystycznym badaniom
+- **Precyzja** - rowne przetopu na calym obwodzie
+
+## Pozycje spawania rur
+
+### Pozycja 1G (rura obracana)
+- Najlatwiejsza pozycja
+- Rura obraca sie, spawacz pracuje w pozycji podolnej
+- Idealna do nauki
+
+### Pozycja 2G (os pozioma)
+- Rura nieruchoma w pozycji poziomej
+- Spawanie w pozycji naroznej
+- Sredni poziom trudnosci
+
+### Pozycja 5G (os pozioma, rura nieruchoma)
+- Rura nieruchoma
+- Spawacz musi obejsc caly obwod
+- Praca w pozycjach PA, PB, PF, PG, PE
+
+### Pozycja 6G (os pod katem 45°)
+- Najtrudniejsza pozycja egzaminacyjna
+- Laczy wszystkie pozycje spawania
+- Wymagana do certyfikacji
+
+## Przygotowanie zlacza
+
+### Fazowanie krawedzi
+- Kat fazowania: 30-37.5 stopni
+- Prog: 1.5-2mm
+- Szczelina: 2-3mm (zalezna od srednicy)
+
+### Sczepianie
+- Minimum 3 punkty dla malych srednich
+- 4-6 punktow dla wiekszych rur
+- Rownomierne rozlozenie na obwodzie
+
+## Technika spawania - warstwa graniowa
+
+### Metoda TIG (GTAW)
+Najlepsza dla warstwy graniowej:
+1. Zajarz luk na plycie rozprowadzajacej
+2. Prowadz spoiwo w jeziorkow
+3. Utrzymuj rownomierny przetop
+4. Kontroluj podtopienia od srodka
+
+### Parametry dla stali weglowej
+
+| Srednica rury | Prad TIG | Spoiwo |
+|---------------|----------|--------|
+| DN25-50 | 80-100A | 2.0mm |
+| DN65-100 | 100-120A | 2.4mm |
+| DN125+ | 120-150A | 3.2mm |
+
+## Warstwy wypelniajace i lico
+
+### Metoda TIG
+- Kontynuacja TIG dla wysokiej jakosci
+- Wolniejsze, ale idealne spoiny
+
+### Metoda MMA
+- Elektrody zasadowe E7018
+- Szybsze wypelnianie
+- Dobre wlasciwosci mechaniczne
+
+### Metoda MIG/MAG
+- Wysoka wydajnosc
+- Wymaga dobrego przygotowania
+
+## Typowe bledy i rozwiazania
+
+| Blad | Przyczyna | Rozwiazanie |
+|------|-----------|-------------|
+| Brak przetopu | Za maly prad, za duza predkosc | Dostosuj parametry |
+| Podtopienia | Za duzy prad, zla technika | Zmniejsz prad, popraw kat |
+| Wklesniety grań | Za mala ilosc spoiwa | Dodaj wiecej materialu |
+| Nadmierny grań | Za duzo ciepla | Zmniejsz prad |
+| Porowatosc | Zanieczyszczenia, wilgoc | Oczysc, osusz |
+
+## Badania i kontrola jakosci
+
+### Badania niszczace
+- Proba rozciagania
+- Proba gięcia (face/root bend)
+- Proba udarnosci
+
+### Badania nieniszczace (NDT)
+- RT (radiografia) - standard dla rurociagow
+- UT (ultradźwieki)
+- PT (penetracyjne)
+- MT (magnetyczno-proszkowe)
+
+## Certyfikacja spawaczy rurarzy
+
+### Normy
+- EN ISO 9606-1 (Europa)
+- ASME Section IX (USA)
+- AWS D1.1
+
+### Zakres uprawnień
+- Grubosc sciany
+- Srednica rury
+- Material
+- Pozycja spawania
+- Metoda spawania
+
+## Wskazówki dla poczatkujacych
+
+1. **Zacznij od 1G** - naucz sie podstaw
+2. **Praktykuj na zomach** - duzo powtorzen
+3. **Filmuj swoje spoiny** - analizuj bledy
+4. **Szukaj mentora** - nauka od doswiadczonych
+5. **Nie spiesz sie** - precyzja przed predkoscia
+    `,
+    category: 'Rury',
+    date: '2024-01-20',
+    readTime: '14 min',
+    image: '/blog/spawanie-rur.png',
+    featured: true
+  },
+  {
+    id: '8',
+    slug: 'spawanie-rur-cisnieniowych',
+    title: 'Spawanie Rur Cisnieniowych - Normy, Wymagania i Najlepsze Praktyki',
+    excerpt: 'Rurociagi cisnieniowe to krytyczna infrastruktura. Dowiedz sie o normach, procedurach kwalifikacji i technikach gwarantujacych bezpieczenstwo.',
+    content: `
+## Wprowadzenie do rur cisnieniowych
+
+Rurociagi cisnieniowe transportuja media pod wysokim cisnieniem - gaz ziemny, rope naftowa, pare wodna czy chemikalia. Blad spawacza moze kosztowac zycie.
+
+## Klasyfikacja rur cisnieniowych
+
+### Wedlug cisnienia
+- **Niskocisnieniowe** - do 1.6 MPa
+- **Sredniocisnieniowe** - 1.6-10 MPa
+- **Wysokocisnieniowe** - powyzej 10 MPa
+
+### Wedlug medium
+- Rurociagi gazowe
+- Rurociagi parowe
+- Rurociagi olejowe
+- Rurociagi procesowe (chemiczne)
+
+## Normy i przepisy
+
+### Normy europejskie
+- **EN 13480** - Metalowe rurociagi przemyslowe
+- **EN 12732** - Rurociagi gazowe
+- **PED 2014/68/EU** - Dyrektywa cisnieniowa
+
+### Normy amerykanskie
+- **ASME B31.1** - Rurociagi energetyczne
+- **ASME B31.3** - Rurociagi procesowe
+- **API 1104** - Rurociagi przesylowe
+
+## Materialy na rury cisnieniowe
+
+### Stale weglowe
+- P235GH, P265GH
+- Ekonomiczne, dobre wlasciwosci
+- Do 450°C
+
+### Stale stopowe
+- 16Mo3 (Mo)
+- 13CrMo4-5 (CrMo)
+- Wyzsza temperatura pracy
+
+### Stale nierdzewne
+- 304, 316 (austenityczne)
+- Odporne na korozje
+- Przemysl chemiczny, spozywczy
+
+## Przygotowanie zlacza
+
+### Geometria rowka
+Zgodnie z WPS (Welding Procedure Specification):
+- Kat ukosowania: 30-37.5°
+- Prog: 1.5-3mm
+- Szczelina: 2-4mm
+
+### Przygotowanie powierzchni
+1. Czyszczenie mechaniczne (25mm od krawedzi)
+2. Odtluszczanie
+3. Kontrola wymiarow
+4. Sprawdzenie owalizacji
+
+## Procedury spawania (WPS)
+
+### Elementy WPS
+- Material podstawowy i dodatkowy
+- Parametry spawania
+- Kolejnosc sciegow
+- Obrobka cieplna
+- Pozycje spawania
+
+### Kwalifikacja procedury (WPQR)
+- Spawanie probi zgodnie z WPS
+- Badania niszczace i nieniszczace
+- Dokumentacja wynikow
+- Zatwierdzenie przez jednostke
+
+## Techniki spawania
+
+### Warstwa graniowa - TIG z gazem formujacym
+Krytyczna dla rur cisnieniowych:
+
+| Element | Wymaganie |
+|---------|-----------|
+| Gaz oslonowy | Argon 99.99% |
+| Gaz formujacy | Argon lub N2/H2 |
+| Przetop | Rowny, bez wad |
+| Utlenienie | Niedopuszczalne |
+
+### Warstwy wypelniajace
+- TIG dla najwyzszej jakosci
+- MMA (elektrody zasadowe)
+- Kombinacja TIG+MMA
+
+### Obrobka cieplna
+- Podgrzewanie wstepne (>150mm, CrMo)
+- Wyżarzanie odprężające po spawaniu
+- Kontrola temperatury miedzysciegowej
+
+## Kontrola jakosci
+
+### Kontrola 100%
+Wymagana dla rur cisnieniowych:
+- Kontrola wizualna (VT)
+- Radiografia (RT) lub
+- Badania ultradzwiekowe (UT)
+
+### Kryteria akceptacji
+Zgodnie z EN ISO 5817:
+- Poziom B dla rur cisnieniowych
+- Brak pekniec, przyklejen
+- Ograniczone podtopienia
+- Kontrolowany nadlew
+
+## Dokumentacja
+
+### Wymagane dokumenty
+1. WPS - procedura spawania
+2. WPQR - kwalifikacja procedury
+3. Certyfikaty spawaczy
+4. Swiadectwa materialowe
+5. Protokoly badan NDT
+6. Dokumentacja obrobki cieplnej
+
+### Identyfikowalnosc
+- Znakowanie spoin
+- Numer spawacza
+- Data wykonania
+- Numer procedury
+
+## Typowe wady i konsekwencje
+
+### Wady niedopuszczalne
+- Pekniecia - zawsze niedopuszczalne
+- Brak przetopu - ryzyko pekniecia
+- Wtrącenia - obnizenie wytrzymalosci
+- Porowatosc - osłabienie struktury
+
+### Konsekwencje
+- Odrzucenie spoiny
+- Naprawa lub wyciecie
+- Ponowne badania
+- Koszty i opoznienia
+
+## Bezpieczenstwo przy spawaniu rur cisnieniowych
+
+1. **Sprawdz procedury** przed rozpoczeciem
+2. **Upewnij sie o kwalifikacjach** - wazne certyfikaty
+3. **Kontroluj warunki** - temperatura, wilgotnosc
+4. **Dokumentuj wszystko** - kazdy etap
+5. **Nie spiesz sie** - jakosc przed predkoscia
+    `,
+    category: 'Rury',
+    date: '2024-01-22',
+    readTime: '16 min',
+    image: '/blog/rury-cisnieniowe.png'
   }
 ]
 
-export const categories = ['Wszystkie', 'Techniki', 'Sprzet', 'BHP', 'Projekty']
+export const categories = ['Wszystkie', 'Techniki', 'Sprzet', 'BHP', 'Projekty', 'Rury']
 
 export function getPostBySlug(slug: string): BlogPost | undefined {
   return blogPosts.find(post => post.slug === slug)
