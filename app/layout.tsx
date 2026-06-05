@@ -2,6 +2,7 @@ import { Analytics } from '@vercel/analytics/next'
 import type { Metadata } from 'next'
 import { Inter, Space_Grotesk } from 'next/font/google'
 import './globals.css'
+import { CookieBanner } from '@/components/cookie-banner'
 
 const inter = Inter({ subsets: ['latin', 'latin-ext'], variable: '--font-inter' })
 const spaceGrotesk = Space_Grotesk({ subsets: ['latin'], variable: '--font-space' })
@@ -38,6 +39,7 @@ export default function RootLayout({
     <html lang="pl" className="bg-background">
       <body className={`${inter.variable} ${spaceGrotesk.variable} font-sans antialiased`}>
         {children}
+        <CookieBanner />
         {process.env.NODE_ENV === 'production' && <Analytics />}
       </body>
     </html>
