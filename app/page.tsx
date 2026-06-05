@@ -33,6 +33,21 @@ export default function HomePage() {
         <div className="absolute inset-0 bg-gradient-to-b from-background/30 via-background/50 to-background/70" />
       </div>
       
+      {/* Fixed logo - stays in place with low z-index so content scrolls over it */}
+      <div className="fixed right-8 top-1/2 -translate-y-1/2 z-[1] pointer-events-none hidden lg:block">
+        <div className="relative">
+          <div className="absolute inset-0 bg-gradient-to-r from-primary/20 to-accent/20 blur-3xl rounded-full scale-150 animate-glow-pulse" />
+          <div className="absolute inset-0 bg-gradient-to-r from-accent/10 to-primary/10 blur-2xl rounded-full scale-125 animate-pulse" style={{ animationDelay: '0.5s' }} />
+          <Image
+            src="/logo.png"
+            alt="TechSpaw Logo"
+            width={400}
+            height={133}
+            className="relative h-auto w-[400px] opacity-40 drop-shadow-[0_0_40px_rgba(0,255,255,0.4)]"
+          />
+        </div>
+      </div>
+      
       <Header />
       
       <main className="flex-1 relative z-10">
