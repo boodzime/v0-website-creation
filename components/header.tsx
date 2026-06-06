@@ -118,7 +118,7 @@ function HeaderContent() {
                 alt="TechSpaw"
                 width={200}
                 height={67}
-                className="relative h-14 w-auto drop-shadow-[0_0_10px_rgba(0,255,255,0.5)] group-hover:drop-shadow-[0_0_20px_rgba(0,255,255,0.8)] transition-all duration-300"
+                className="relative h-20 w-auto drop-shadow-[0_0_10px_rgba(0,255,255,0.5)] group-hover:drop-shadow-[0_0_20px_rgba(0,255,255,0.8)] transition-all duration-300"
               />
             </div>
           </Link>
@@ -182,9 +182,9 @@ function HeaderContent() {
               <Image
                 src="/logo.png"
                 alt="TechSpaw"
-                width={140}
-                height={47}
-                className="relative h-9 w-auto drop-shadow-[0_0_8px_rgba(0,255,255,0.5)] group-hover:drop-shadow-[0_0_15px_rgba(0,255,255,0.8)] transition-all duration-300"
+                width={200}
+                height={67}
+                className="relative h-14 w-auto drop-shadow-[0_0_8px_rgba(0,255,255,0.5)] group-hover:drop-shadow-[0_0_15px_rgba(0,255,255,0.8)] transition-all duration-300"
               />
             </div>
           </Link>
@@ -256,7 +256,7 @@ export function Header() {
       <>
         {/* Desktop Header Skeleton */}
         <header className="animate-fade-in-down sticky top-0 z-50 border-b border-primary/10 bg-background/40 backdrop-blur-md hidden md:block">
-          <div className="mx-auto flex h-20 max-w-6xl items-center justify-between px-4">
+        <div className="mx-auto flex h-24 max-w-6xl items-center justify-between px-4">
             <div className="h-14 w-[200px] bg-muted/20 rounded animate-pulse" />
             <div className="flex gap-2">
               {[1,2,3,4,5,6].map(i => (
@@ -271,7 +271,7 @@ export function Header() {
         </header>
         {/* Mobile Header Skeleton */}
         <header className="md:hidden sticky top-0 z-50 border-b border-primary/10 bg-background/60 backdrop-blur-md">
-          <div className="flex h-14 items-center justify-center px-4">
+        <div className="flex h-20 items-center justify-center px-4">
             <div className="h-9 w-[140px] bg-muted/20 rounded animate-pulse" />
           </div>
         </header>
