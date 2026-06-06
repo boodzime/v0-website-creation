@@ -6,13 +6,15 @@ import { useState, useEffect, Suspense } from 'react'
 import { usePathname, useSearchParams } from 'next/navigation'
 
 const navItems = [
-  { href: '/', label: 'Start', icon: 'home' },
-  { href: '/blog', label: 'Blog', icon: 'blog' },
-  { href: '/galeria', label: 'Galeria', icon: 'gallery' },
-  { href: '/blog?kategoria=Techniki', label: 'Techniki', icon: 'tech' },
-  { href: '/blog?kategoria=Sprzet', label: 'Sprzet', icon: 'gear' },
-  { href: '/blog?kategoria=BHP', label: 'BHP', icon: 'shield' },
+  { href: '/', label: 'Start', icon: 'home', section: 'start' },
+  { href: '/blog', label: 'Blog', icon: 'blog', section: 'blog' },
+  { href: '/galeria', label: 'Galeria', icon: 'gallery', section: 'galeria' },
+  { href: '/blog?kategoria=Techniki', label: 'Techniki', icon: 'tech', section: 'techniki' },
+  { href: '/blog?kategoria=Sprzet', label: 'Sprzet', icon: 'gear', section: 'sprzet' },
+  { href: '/blog?kategoria=BHP', label: 'BHP', icon: 'shield', section: 'bhp' },
 ]
+
+const sectionIds = ['start', 'blog', 'galeria', 'techniki', 'sprzet', 'bhp']
 
 function NavIcon({ type, className }: { type: string; className?: string }) {
   switch (type) {
@@ -76,6 +78,7 @@ function FacebookIcon({ className }: { className?: string }) {
 
 function HeaderContent() {
   const [scrolled, setScrolled] = useState(false)
+  const [activeSection, setActiveSection] = useState('start')
   const pathname = usePathname()
   const searchParams = useSearchParams()
 
@@ -86,15 +89,61 @@ function HeaderContent() {
     return () => window.removeEventListener('scroll', onScroll)
   }, [])
 
-  const isActive = (href: string) => {
-    if (href === '/') return pathname === '/'
-    if (href.includes('?')) {
-      const [path, query] = href.split('?')
+  // Scroll-spy: highlight the menu item for the section currently in view (home page only)
+  useEffect(() => {
+    if (pathname !== '/') return
+
+    const sections = sectionIds
+      .map((id) => document.getElementById(id))
+      .filter((el): el is HTMLElement => el !== null)
+
+    if (sections.length === 0) return
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        const visible = entries
+          .filter((entry) => entry.isIntersecting)
+          .sort((a, b) => b.intersectionRatio - a.intersectionRatio)
+
+        if (visible[0]) {
+          setActiveSection(visible[0].target.id)
+        }
+      },
+      {
+        // Trigger when a section crosses the upper-middle of the viewport
+        rootMargin: '-45% 0px -45% 0px',
+        threshold: [0, 0.25, 0.5, 0.75, 1],
+      }
+    )
+
+    sections.forEach((section) => observer.observe(section))
+    return () => observer.disconnect()
+  }, [pathname])
+
+  const isActive = (item: (typeof navItems)[number]) => {
+    // On the home page, highlight based on the section currently scrolled into view
+    if (pathname === '/') {
+      return item.section === activeSection
+    }
+    if (item.href === '/') return false
+    if (item.href.includes('?')) {
+      const [path, query] = item.href.split('?')
       const params = new URLSearchParams(query)
       const kategoria = params.get('kategoria')
       return pathname === path && searchParams.get('kategoria') === kategoria
     }
-    return pathname === href && !searchParams.get('kategoria')
+    return pathname === item.href && !searchParams.get('kategoria')
+  }
+
+  // On the home page, intercept clicks to smooth-scroll to the matching section
+  const handleNavClick = (e: React.MouseEvent, item: (typeof navItems)[number]) => {
+    if (pathname !== '/') return
+    const target = document.getElementById(item.section)
+    if (target) {
+      e.preventDefault()
+      target.scrollIntoView({ behavior: 'smooth' })
+      setActiveSection(item.section)
+    }
   }
 
   return (
@@ -128,8 +177,9 @@ function HeaderContent() {
               <Link
                 key={item.href}
                 href={item.href}
+                onClick={(e) => handleNavClick(e, item)}
                 className={`relative px-4 py-2 rounded-lg text-sm font-medium transition-all duration-300 group ${
-                  isActive(item.href)
+                  isActive(item)
                     ? 'text-primary bg-primary/10'
                     : 'text-muted-foreground hover:text-primary hover:bg-primary/5'
                 }`}
@@ -137,7 +187,7 @@ function HeaderContent() {
               >
                 {item.label}
                 <span className={`absolute bottom-1 left-1/2 -translate-x-1/2 h-0.5 bg-gradient-to-r from-primary to-accent rounded-full transition-all duration-300 ${
-                  isActive(item.href) ? 'w-2/3' : 'w-0 group-hover:w-2/3'
+                  isActive(item) ? 'w-2/3' : 'w-0 group-hover:w-2/3'
                 }`} />
               </Link>
             ))}
@@ -202,11 +252,12 @@ function HeaderContent() {
         {/* Nav items */}
         <div className="relative flex items-stretch justify-around px-1 py-2">
           {navItems.map((item, index) => {
-            const active = isActive(item.href)
+            const active = isActive(item)
             return (
               <Link
                 key={item.href}
                 href={item.href}
+                onClick={(e) => handleNavClick(e, item)}
                 className={`relative flex flex-col items-center justify-center gap-0.5 px-2 py-1.5 rounded-xl transition-all duration-300 min-w-[56px] ${
                   active
                     ? 'text-primary'

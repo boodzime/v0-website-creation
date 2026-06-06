@@ -7,6 +7,8 @@ import {
   StatsSection, 
   FeaturedPostsSection, 
   RecentPostsSection, 
+  CategorySection,
+  GalleryPreviewSection,
   CTASection 
 } from '@/components/animated-sections'
 import { ContactSection, FloatingPhoneButton } from '@/components/contact-section'
@@ -52,7 +54,7 @@ export default function HomePage() {
       
       <main className="flex-1 relative z-10">
         {/* Hero Section */}
-        <section className="relative overflow-hidden border-b border-border">
+        <section id="start" className="relative overflow-hidden border-b border-border scroll-mt-24">
           {/* Additional overlay for hero readability */}
           <div className="absolute inset-0 bg-gradient-to-r from-background/60 via-background/30 to-transparent" />
 
@@ -183,6 +185,36 @@ export default function HomePage() {
         <StatsSection />
         <FeaturedPostsSection posts={featuredPosts} />
         <RecentPostsSection posts={recentPosts} />
+        <GalleryPreviewSection />
+        <CategorySection
+          id="techniki"
+          eyebrow="Techniki spawania"
+          title="Techniki"
+          highlight="spawania"
+          description="MIG, TIG, MMA i wiele wiecej - poznaj metody spawania"
+          category="Techniki"
+          posts={blogPosts}
+          altBg
+        />
+        <CategorySection
+          id="sprzet"
+          eyebrow="Sprzet spawalniczy"
+          title="Sprzet"
+          highlight="i akcesoria"
+          description="Recenzje i poradniki doboru sprzetu spawalniczego"
+          category="Sprzet"
+          posts={blogPosts}
+        />
+        <CategorySection
+          id="bhp"
+          eyebrow="Bezpieczenstwo"
+          title="BHP"
+          highlight="przy spawaniu"
+          description="Zasady bezpieczenstwa, ktorych nie mozna ignorowac"
+          category="BHP"
+          posts={blogPosts}
+          altBg
+        />
         <ContactSection />
         <CTASection />
       </main>
