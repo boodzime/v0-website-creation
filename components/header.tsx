@@ -8,6 +8,7 @@ import { usePathname, useSearchParams } from 'next/navigation'
 const navItems = [
   { href: '/', label: 'Start', icon: 'home' },
   { href: '/blog', label: 'Blog', icon: 'blog' },
+  { href: '/galeria', label: 'Galeria', icon: 'gallery' },
   { href: '/blog?kategoria=Techniki', label: 'Techniki', icon: 'tech' },
   { href: '/blog?kategoria=Sprzet', label: 'Sprzet', icon: 'gear' },
   { href: '/blog?kategoria=BHP', label: 'BHP', icon: 'shield' },
@@ -43,6 +44,14 @@ function NavIcon({ type, className }: { type: string; className?: string }) {
         <svg className={className} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
           <circle cx="12" cy="12" r="3" />
           <path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z" />
+        </svg>
+      )
+    case 'gallery':
+      return (
+        <svg className={className} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+          <rect x="3" y="3" width="18" height="18" rx="2" ry="2" />
+          <circle cx="9" cy="9" r="2" />
+          <path d="m21 15-3.086-3.086a2 2 0 0 0-2.828 0L6 21" />
         </svg>
       )
     case 'shield':
@@ -250,7 +259,7 @@ export function Header() {
           <div className="mx-auto flex h-20 max-w-6xl items-center justify-between px-4">
             <div className="h-14 w-[200px] bg-muted/20 rounded animate-pulse" />
             <div className="flex gap-2">
-              {[1,2,3,4,5].map(i => (
+              {[1,2,3,4,5,6].map(i => (
                 <div key={i} className="h-8 w-16 bg-muted/20 rounded animate-pulse" />
               ))}
             </div>
@@ -270,7 +279,7 @@ export function Header() {
         <nav className="md:hidden fixed bottom-0 left-0 right-0 z-50 pb-[env(safe-area-inset-bottom)]">
           <div className="absolute inset-0 bg-background/80 backdrop-blur-xl border-t border-primary/20" />
           <div className="relative flex items-stretch justify-around px-1 py-2">
-            {[1,2,3,4,5].map(i => (
+            {[1,2,3,4,5,6].map(i => (
               <div key={i} className="flex flex-col items-center gap-1 min-w-[56px]">
                 <div className="h-5 w-5 bg-muted/20 rounded animate-pulse" />
                 <div className="h-2 w-8 bg-muted/20 rounded animate-pulse" />
