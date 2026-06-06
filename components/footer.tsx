@@ -63,6 +63,7 @@ export function Footer() {
               {[
                 { href: '/', label: 'Strona glowna' },
                 { href: '/blog', label: 'Blog' },
+                { href: '/galeria', label: 'Galeria' },
                 { href: '/blog?kategoria=Techniki', label: 'Techniki' },
                 { href: '/blog?kategoria=Sprzet', label: 'Sprzet' },
                 { href: '/blog?kategoria=BHP', label: 'BHP' },
